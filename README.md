@@ -145,6 +145,12 @@ Your Round 2 submission is evaluated out of **100 points**:
 
 For the vision-based portions of the Prep Manager, use an appropriate unseen/held-out evaluation set and report your methodology, results, false positives, false negatives, `UNCERTAIN` cases and failure modes.
 
+### Held-out products vs operator work orders
+
+PRODUCT-1 through PRODUCT-15 are evaluation-only physical products and are NOT operator work-order Unit IDs. Their 45 original photographs form the frozen held-out vision dataset and are evaluated through the held-out evaluation harness against frozen reference visual annotations.
+
+For the interactive operator workflow, use the provided Sample A/B/C work orders or another configured work-order unit. Entering PRODUCT-1 through PRODUCT-15 in the Unit ID field is therefore expected to return 'work order not found'.
+
 ---
 
 ## Evidence and decision traceability
