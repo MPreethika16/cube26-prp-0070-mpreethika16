@@ -45,6 +45,22 @@ export const polybagSealStatusSchema = z.enum([
   "UNCERTAIN",
 ]);
 
+/**
+ * Observed physical packaging type.
+ *
+ * Captures what type of plastic enclosure/wrapping is physically visible without
+ * forcing every plastic enclosure to be labeled as a "polybag", and without deciding
+ * whether that packaging type satisfies Amazon compliance requirements.
+ */
+export const packagingTypeSchema = z.enum([
+  "POLYBAG",
+  "SHRINK_WRAP",
+  "PLASTIC_OVERWRAP",
+  "OTHER_PLASTIC",
+  "NONE_DETECTED",
+  "UNCERTAIN",
+]);
+
 export const fnskuPlacementSchema = z.enum([
   "FLAT_SURFACE",
   "CURVED_SURFACE",
@@ -54,10 +70,22 @@ export const fnskuPlacementSchema = z.enum([
   "UNCERTAIN",
 ]);
 
+/**
+ * Visual completeness of an observed identifier (e.g. FNSKU, barcode).
+ * Prevents language models from autocompleting cropped or partially visible sequences.
+ */
+export const valueCompletenessSchema = z.enum([
+  "COMPLETE",
+  "PARTIAL",
+  "UNCERTAIN",
+]);
+
+export type ValueCompleteness = z.infer<typeof valueCompletenessSchema>;
+
 /** Image-backed note describing what was seen (not a compliance judgment). */
 export const visualEvidenceSchema = z.object({
   imageId: z.string(),
-  description: z.string(),
+  description: z.string().default(""),
 });
 
 export const imageQualitySchema = z.object({
@@ -74,6 +102,7 @@ const withEvidence = <T extends z.ZodRawShape>(shape: T) =>
 export const polybagObservationSchema = withEvidence({
   visibility: visibilitySchema,
   sealStatus: polybagSealStatusSchema,
+  packagingType: packagingTypeSchema.optional(),
 });
 
 export const suffocationWarningObservationSchema = withEvidence({
@@ -85,14 +114,49 @@ export const suffocationWarningObservationSchema = withEvidence({
 export const fnskuObservationSchema = withEvidence({
   visibility: visibilitySchema,
   legibility: legibilitySchema,
+  valueCompleteness: valueCompletenessSchema.optional(),
   detectedValue: z.string().nullable(),
   placement: fnskuPlacementSchema,
   placementDescription: z.string().nullable(),
 });
 
+export const barcodeCoverageStatusSchema = z.enum([
+  "COVERED",
+  "NOT_COVERED",
+  "UNCERTAIN",
+]);
+
+export type BarcodeCoverageStatus = z.infer<typeof barcodeCoverageStatusSchema>;
+
+export const barcodeCoveringTypeSchema = z.enum([
+  "FNSKU_LABEL",
+  "OPAQUE_LABEL",
+  "OTHER",
+]);
+
+export type BarcodeCoveringType = z.infer<typeof barcodeCoveringTypeSchema>;
+
+export const manufacturerBarcodeCoverageObservationSchema = withEvidence({
+  status: barcodeCoverageStatusSchema,
+  coveringType: barcodeCoveringTypeSchema.nullable(),
+}).refine(
+  (data) => {
+    // COVERED status strictly requires at least one piece of visual evidence
+    if (data.status === "COVERED" && (!data.evidence || data.evidence.length === 0)) {
+      return false;
+    }
+    return true;
+  },
+  {
+    message: "COVERED status strictly requires positive visual evidence.",
+    path: ["evidence"],
+  }
+);
+
 export const manufacturerBarcodeObservationSchema = withEvidence({
   visibility: visibilitySchema,
   legibility: legibilitySchema,
+  valueCompleteness: valueCompletenessSchema.optional(),
   detectedValue: z.string().nullable(),
 });
 
@@ -123,6 +187,7 @@ export const prepUnitObservationSchema = z.object({
   suffocationWarning: suffocationWarningObservationSchema,
   fnsku: fnskuObservationSchema,
   manufacturerBarcode: manufacturerBarcodeObservationSchema,
+  manufacturerBarcodeCoverage: manufacturerBarcodeCoverageObservationSchema.optional(),
   expiryDate: expiryDateObservationSchema,
   handlingMarks: z.array(handlingMarkObservationSchema),
   otherVisibleIssues: z.array(otherVisibleIssueSchema),
@@ -132,6 +197,7 @@ export type Visibility = z.infer<typeof visibilitySchema>;
 export type Legibility = z.infer<typeof legibilitySchema>;
 export type ImageQualityOverall = z.infer<typeof imageQualityOverallSchema>;
 export type PolybagSealStatus = z.infer<typeof polybagSealStatusSchema>;
+export type PackagingType = z.infer<typeof packagingTypeSchema>;
 export type FnskuPlacement = z.infer<typeof fnskuPlacementSchema>;
 export type VisualEvidence = z.infer<typeof visualEvidenceSchema>;
 export type ImageQuality = z.infer<typeof imageQualitySchema>;
@@ -142,6 +208,9 @@ export type SuffocationWarningObservation = z.infer<
 export type FnskuObservation = z.infer<typeof fnskuObservationSchema>;
 export type ManufacturerBarcodeObservation = z.infer<
   typeof manufacturerBarcodeObservationSchema
+>;
+export type ManufacturerBarcodeCoverageObservation = z.infer<
+  typeof manufacturerBarcodeCoverageObservationSchema
 >;
 export type ExpiryDateObservation = z.infer<typeof expiryDateObservationSchema>;
 export type HandlingMarkObservation = z.infer<

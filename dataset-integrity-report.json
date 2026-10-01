@@ -1,0 +1,471 @@
+{
+  "products": [
+    "PRODUCT-1",
+    "PRODUCT-2",
+    "PRODUCT-3",
+    "PRODUCT-4",
+    "PRODUCT-5",
+    "PRODUCT-6",
+    "PRODUCT-7",
+    "PRODUCT-8",
+    "PRODUCT-9",
+    "PRODUCT-10",
+    "PRODUCT-11",
+    "PRODUCT-12",
+    "PRODUCT-13",
+    "PRODUCT-14",
+    "PRODUCT-15"
+  ],
+  "productImages": [
+    {
+      "product": "PRODUCT-1",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-1\\back.jpeg",
+      "sizeBytes": 136181,
+      "sha256": "3aa0f3a74a0f54379539206dd0a32f34112e3d22163d02d329205de2f38cf1d0",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-1",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-1\\front.jpeg",
+      "sizeBytes": 87196,
+      "sha256": "690db8c754c1e496b44657dc9b07f50e2917aca66912082dfc9ebdfb2a0611dc",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-1",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-1\\label.jpeg",
+      "sizeBytes": 350321,
+      "sha256": "f843917776eb415569404bb7921ffe56e332fd9a03d44577fd0cbe49526d534a",
+      "width": 1600,
+      "height": 1568,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-2",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-2\\back.jpeg",
+      "sizeBytes": 72053,
+      "sha256": "f3f9cac95560a6a59127dd7095545c1aaf1914771f236ff7d3486437f5dcf4e5",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-2",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-2\\front.jpeg",
+      "sizeBytes": 72486,
+      "sha256": "b491a8e984c0c0ad5740c1367f9f3a5f89661a425467ec1cdbf628c14fa3af2d",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-2",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-2\\label.jpeg",
+      "sizeBytes": 139893,
+      "sha256": "9501af8d44035e6a98f21b69685c1fae1afd4e3024889890b3ee2795b910606d",
+      "width": 906,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-3",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-3\\back.jpeg",
+      "sizeBytes": 69661,
+      "sha256": "19543d0f21fb1dd270cf0e7bf710b6bd6d157088c3fd4754fc8267a748bd8488",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-3",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-3\\front.jpeg",
+      "sizeBytes": 114805,
+      "sha256": "ac17f3ce27e95ba1933b3596cd8757020e81ce703f81ca43b0ad11adddaded73",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-3",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-3\\label.jpeg",
+      "sizeBytes": 184793,
+      "sha256": "bbb6da11c036c976bc641a6384b0abeb26fda751108e1386bd4688c7192df8aa",
+      "width": 932,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-4",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-4\\back.jpeg",
+      "sizeBytes": 72980,
+      "sha256": "5b688d3a08c7399c11d3a6395f71bb3188f4578dc27cf76b63fe74b457767d84",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-4",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-4\\front.jpeg",
+      "sizeBytes": 77405,
+      "sha256": "9a215192c42897319706dbb08d7a31f55d2fd3fb5d9708425bf5204adfb2f167",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-4",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-4\\label.jpeg",
+      "sizeBytes": 140446,
+      "sha256": "c9e6b2dea0debe8fbb2e791ad1f3f197defdd7d862f4650618e8c54901fb65df",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-5",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-5\\back.jpeg",
+      "sizeBytes": 118747,
+      "sha256": "22a6c63852d60eba5a9caa9d40b56c89ebb69f3ae711d3cce976748ad0b7e9e0",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-5",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-5\\front.jpeg",
+      "sizeBytes": 116685,
+      "sha256": "b43e0a60e5421edcef56597e71e4b8ae5038a021148d8fd0f1acc3d6d6d016f1",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-5",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-5\\label.jpeg",
+      "sizeBytes": 155625,
+      "sha256": "cd1926ef29f719227faa82e0828246eaf2474e0b77f5908964469d178a7971f0",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-6",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-6\\back.jpeg",
+      "sizeBytes": 99773,
+      "sha256": "f7017d4be069ae7c78d4d0674d0fb2f5dd463cbb90eb44157c7d48ba802af989",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-6",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-6\\front.jpeg",
+      "sizeBytes": 93545,
+      "sha256": "6a2e530ecf5b724371d6321639f0898b9f49740dfa1ba9306bebb47ff916b2d6",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-6",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-6\\label.jpeg",
+      "sizeBytes": 117961,
+      "sha256": "f515885ff6d8f51c85d3b45e7ecb3fa97657e6295b6c0ae46c48d290771411ac",
+      "width": 553,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-7",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-7\\back.jpeg",
+      "sizeBytes": 117185,
+      "sha256": "c55999d418618f73a230620ff708b774eb344d9d2a0f9ba7df0f0b4348a9f32c",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-7",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-7\\front.jpeg",
+      "sizeBytes": 111539,
+      "sha256": "4d3b4611ceaf36441784c971798d1cde2b31927f2eea6c7f6a4fc4d819064539",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-7",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-7\\label.jpeg",
+      "sizeBytes": 133056,
+      "sha256": "50ac76b8a8494cd4effa32d0a91b141ff8382d019a431abaafb58b08f86b2947",
+      "width": 964,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-8",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-8\\back.jpeg",
+      "sizeBytes": 84262,
+      "sha256": "53a736174f77777c874aeae5fe8330b60a1e05b2a4441050c3d4038ab87e0564",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-8",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-8\\front.jpeg",
+      "sizeBytes": 79262,
+      "sha256": "5fbfb56e6e4638b89c95f6107a3cf1d416b30b145de57f075de2258170f71826",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-8",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-8\\label.jpeg",
+      "sizeBytes": 114316,
+      "sha256": "ae958e537e6005c51fb4d3bc07ee2a25eefa697dd0024970de3082a45601194b",
+      "width": 738,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-9",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-9\\back.jpeg",
+      "sizeBytes": 121411,
+      "sha256": "6a0cf0588775e79f5b3af61daae3bce7bac582a8fe875108c6da175f5476a64d",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-9",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-9\\front.jpeg",
+      "sizeBytes": 92521,
+      "sha256": "f838fa3c8a773ac2a0c95c1701546d184c536d6af3cdf2499bce65e1efbdf1e0",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-9",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-9\\label.jpeg",
+      "sizeBytes": 142948,
+      "sha256": "84933da037a11fb1540dc4c2e0ed56ae7b1c4fe15f62a1e37c9413c9e399d37b",
+      "width": 863,
+      "height": 1331,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-10",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-10\\back.jpeg",
+      "sizeBytes": 156211,
+      "sha256": "748427e55802a9690268b08bc4cd5fc465eae696d3de61dfada6c27f218df1cb",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-10",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-10\\front.jpeg",
+      "sizeBytes": 99003,
+      "sha256": "367dcc5b8ded5798782715a3eea59f471c9bd5bf96ec404850dc3999bcf2ee55",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-10",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-10\\label.jpeg",
+      "sizeBytes": 107914,
+      "sha256": "7405bf7ff3e19155d18d3afaeb4ddd379f9f69d7c66eae6ba093e392c78d7a45",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-11",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-11\\back.jpeg",
+      "sizeBytes": 110198,
+      "sha256": "f782dddb1f3371cfb422f362cceb859fb10a627ec16d7ab0efd5d2e01ae0fc70",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-11",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-11\\front.jpeg",
+      "sizeBytes": 140544,
+      "sha256": "0f6d0ab8ab07a160e1a2481e09d956ce6e7d21e384d4ffd31b2b74213ae1f1fa",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-11",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-11\\label.jpeg",
+      "sizeBytes": 155181,
+      "sha256": "3fdd9bc2b86b0b4876fa9dd92e0570589115373052104ddc4ecc512485fce941",
+      "width": 624,
+      "height": 1589,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-12",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-12\\back.jpeg",
+      "sizeBytes": 89890,
+      "sha256": "cd5e926e78feb00b2efcdce8186b5776a40601cfb1c86319895b1cdd76630eab",
+      "width": 711,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-12",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-12\\front.jpeg",
+      "sizeBytes": 74071,
+      "sha256": "1423e2af11ab25044a78fae61e0f34f9a6882752b39696ebee79512ec281b4b1",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-12",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-12\\label.jpeg",
+      "sizeBytes": 38938,
+      "sha256": "507d482409ad6204b8e544cdda99d09eb660f364ccb8214caafc133e7dbbe85b",
+      "width": 313,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-13",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-13\\back.jpeg",
+      "sizeBytes": 100472,
+      "sha256": "2e8c1cef91376fdbef66b484960930feb747a75970c110afbc0bb9b46a40280e",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-13",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-13\\front.jpeg",
+      "sizeBytes": 69557,
+      "sha256": "7cdc7a04265043e03f730d85d2d5dfaf28e38638bc7cc5cc6ff0a4537779a2eb",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-13",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-13\\label.jpeg",
+      "sizeBytes": 127291,
+      "sha256": "0f1984f63d2ecd783ab4a9d984dd876fd8ab1d85d0b31447c5eb719105ba07a0",
+      "width": 1337,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-14",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-14\\back.jpeg",
+      "sizeBytes": 185651,
+      "sha256": "8ad7c32aabce7e1684632ce7f09474eeb5e80788ee1c14054be563bf48971bf0",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-14",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-14\\front.jpeg",
+      "sizeBytes": 124290,
+      "sha256": "1122d7476b615075d28fc282625ac02e0cc137319cff1a13513e63b6cce09a02",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-14",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-14\\label.jpeg",
+      "sizeBytes": 117207,
+      "sha256": "c228918fc9eb2b70a4fd4a7f0bc942120a50f25cc862f9cd9de13e95dcc873ae",
+      "width": 875,
+      "height": 1536,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-15",
+      "filename": "back.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-15\\back.jpeg",
+      "sizeBytes": 116394,
+      "sha256": "29fffe79d9897f9e7b4b0a81e5ca5e7aefaab77a91dc3912a936fc1fd45b486f",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-15",
+      "filename": "front.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-15\\front.jpeg",
+      "sizeBytes": 118894,
+      "sha256": "b902e2f36b2161a1165a3b0abf4eada3180b5dcda119a96ea175851992fa03fd",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    },
+    {
+      "product": "PRODUCT-15",
+      "filename": "label.jpeg",
+      "fullPath": "C:\\Users\\Preethika\\OneDrive\\Desktop\\cube26-prp-0070-mpreethika16\\fixtures\\prep\\real\\PRODUCT-15\\label.jpeg",
+      "sizeBytes": 179251,
+      "sha256": "938b8e613cdb4400e933cc97c4c218e6bc3d1639e7f6ab54ffe7f57f30770d50",
+      "width": 900,
+      "height": 1600,
+      "isReadable": true
+    }
+  ]
+}
