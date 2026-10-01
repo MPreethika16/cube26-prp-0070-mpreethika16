@@ -1,0 +1,1642 @@
+[
+  {
+    "scenarioId": "CONTROL-CLEAN",
+    "name": "Clean Control (Unaltered Baseline)",
+    "description": "Clean baseline FNSKU label and packaging",
+    "featureChallenged": "Clean baseline FNSKU label and packaging",
+    "expectedLegibility": "LEGIBLE",
+    "expectedValue": "X00DUMMY001",
+    "runs": [
+      {
+        "runIndex": 1,
+        "durationMs": 3729,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "GOOD",
+            "issues": []
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "LEGIBLE",
+            "valueCompleteness": "COMPLETE",
+            "detectedValue": "X00DUMMY001",
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU label is placed flat on the back outer surface.",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU barcode label clearly visible with complete bars and text 'X00DUMMY001' on a flat surface."
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "Opaque cover label present on the back panel covering the manufacturer barcode completely."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "LEGIBLE",
+        "fnskuValueCompleteness": "COMPLETE",
+        "fnskuDetectedValue": "X00DUMMY001",
+        "imageQualityOverall": "GOOD",
+        "imageQualityIssues": [],
+        "downstreamCheckVerdict": "PASS",
+        "downstreamReasonCode": "REQUIREMENT_SATISFIED",
+        "operationalStatus": "READY",
+        "isFalsePass": false,
+        "isUnsafeConfident": false
+      },
+      {
+        "runIndex": 2,
+        "durationMs": 2870,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "GOOD",
+            "issues": []
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "LEGIBLE",
+            "valueCompleteness": "COMPLETE",
+            "detectedValue": "X00DUMMY001",
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU label is placed on a flat outer surface of the packaging.",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU label with barcode and text X00DUMMY001 is visible on the flat outer surface."
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label is present, covering the manufacturer barcode completely."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "LEGIBLE",
+        "fnskuValueCompleteness": "COMPLETE",
+        "fnskuDetectedValue": "X00DUMMY001",
+        "imageQualityOverall": "GOOD",
+        "imageQualityIssues": [],
+        "downstreamCheckVerdict": "PASS",
+        "downstreamReasonCode": "REQUIREMENT_SATISFIED",
+        "operationalStatus": "READY",
+        "isFalsePass": false,
+        "isUnsafeConfident": false
+      },
+      {
+        "runIndex": 3,
+        "durationMs": 12684,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "GOOD",
+            "issues": []
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "LEGIBLE",
+            "valueCompleteness": "COMPLETE",
+            "detectedValue": "X00DUMMY001",
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU label is placed on the flat outer surface.",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU barcode label visible on flat outer surface."
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label is placed over the manufacturer barcode location."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "LEGIBLE",
+        "fnskuValueCompleteness": "COMPLETE",
+        "fnskuDetectedValue": "X00DUMMY001",
+        "imageQualityOverall": "GOOD",
+        "imageQualityIssues": [],
+        "downstreamCheckVerdict": "PASS",
+        "downstreamReasonCode": "REQUIREMENT_SATISFIED",
+        "operationalStatus": "READY",
+        "isFalsePass": false,
+        "isUnsafeConfident": false
+      }
+    ],
+    "repeatability": {
+      "exactAgreement": true,
+      "visibilityAgreement": true,
+      "legibilityAgreement": true,
+      "detectedValueAgreement": true,
+      "unsafeConfidentCount": 0
+    }
+  },
+  {
+    "scenarioId": "STRESS-01-MODERATE-BLUR",
+    "name": "Moderate Optical Blur (sigma=5)",
+    "description": "FNSKU legibility under motion blur",
+    "featureChallenged": "FNSKU legibility under motion blur",
+    "expectedLegibility": "ILLEGIBLE_OR_UNCERTAIN",
+    "expectedValue": null,
+    "runs": [
+      {
+        "runIndex": 1,
+        "durationMs": 0,
+        "observation": null,
+        "parseSuccess": false,
+        "fnskuVisibility": "ERROR",
+        "fnskuLegibility": "ERROR",
+        "fnskuValueCompleteness": "ERROR",
+        "fnskuDetectedValue": null,
+        "imageQualityOverall": "ERROR",
+        "imageQualityIssues": [],
+        "downstreamCheckVerdict": "ERROR",
+        "downstreamReasonCode": "ERROR",
+        "operationalStatus": "ERROR",
+        "isFalsePass": false,
+        "isUnsafeConfident": false,
+        "error": "Failed to parse model response as JSON for unit \"DEMO-COMPLIANT\": Expected double-quoted property name in JSON at position 550 (line 24 column 5). Raw response: {\n  \"unitId\": \"DEMO-COMPLIANT\",\n  \"imageQuality\": {\n    \"overall\": \"DEGRADED\",\n    \"issues\": [\n      \"Image 'label' is blurred, making FNSKU text and barcode numbers unreadable.\"\n    ]\n  },\n  \"polybag\": {\n    \"visibility\": \"NOT_DETECTED\",\n    \"sealStatus\": \"UNCERTAIN\",\n    \"packagingType\": \"NONE_DET"
+      },
+      {
+        "runIndex": 2,
+        "durationMs": 2668,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "GOOD",
+            "issues": []
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "ILLEGIBLE",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU placed on a flat outer surface of the packaging",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU barcode label is visible on a flat surface."
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label is placed over the manufacturer barcode location."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "ILLEGIBLE",
+        "fnskuValueCompleteness": "UNCERTAIN",
+        "fnskuDetectedValue": null,
+        "imageQualityOverall": "GOOD",
+        "imageQualityIssues": [],
+        "downstreamCheckVerdict": "UNCERTAIN",
+        "downstreamReasonCode": "TEXT_ILLEGIBLE",
+        "operationalStatus": "REVIEW_REQUIRED",
+        "isFalsePass": false,
+        "isUnsafeConfident": false
+      },
+      {
+        "runIndex": 3,
+        "durationMs": 2731,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "GOOD",
+            "issues": []
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "ILLEGIBLE",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU placed on flat outer surface",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU label visible on flat surface, but text and barcode characters are blurred and unreadable"
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "Opaque cover label present, stating manufacturer barcode covered completely"
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "ILLEGIBLE",
+        "fnskuValueCompleteness": "UNCERTAIN",
+        "fnskuDetectedValue": null,
+        "imageQualityOverall": "GOOD",
+        "imageQualityIssues": [],
+        "downstreamCheckVerdict": "UNCERTAIN",
+        "downstreamReasonCode": "TEXT_ILLEGIBLE",
+        "operationalStatus": "REVIEW_REQUIRED",
+        "isFalsePass": false,
+        "isUnsafeConfident": false
+      }
+    ],
+    "repeatability": {
+      "exactAgreement": false,
+      "visibilityAgreement": false,
+      "legibilityAgreement": false,
+      "detectedValueAgreement": true,
+      "unsafeConfidentCount": 0
+    }
+  },
+  {
+    "scenarioId": "STRESS-02-SEVERE-BLUR",
+    "name": "Severe Out-of-Focus Blur (sigma=18)",
+    "description": "FNSKU legibility under severe defocus (must not guess text)",
+    "featureChallenged": "FNSKU legibility under severe defocus (must not guess text)",
+    "expectedLegibility": "ILLEGIBLE_OR_UNCERTAIN",
+    "expectedValue": null,
+    "runs": [
+      {
+        "runIndex": 1,
+        "durationMs": 9340,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "DEGRADED",
+            "issues": [
+              "The label image is heavily blurred, preventing barcode and text legibility."
+            ]
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "ILLEGIBLE",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "An FNSKU barcode label is placed on a flat surface of the product in the label view.",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "A barcode label is visible on the product surface but is too blurred to read."
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label is placed over the manufacturer barcode location, with text stating manufacturer barcode covered completely."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "ILLEGIBLE",
+        "fnskuValueCompleteness": "UNCERTAIN",
+        "fnskuDetectedValue": null,
+        "imageQualityOverall": "DEGRADED",
+        "imageQualityIssues": [
+          "The label image is heavily blurred, preventing barcode and text legibility."
+        ],
+        "downstreamCheckVerdict": "UNCERTAIN",
+        "downstreamReasonCode": "TEXT_ILLEGIBLE",
+        "operationalStatus": "REVIEW_REQUIRED",
+        "isFalsePass": false,
+        "isUnsafeConfident": false
+      },
+      {
+        "runIndex": 2,
+        "durationMs": 3059,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "DEGRADED",
+            "issues": [
+              "blur"
+            ]
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "ILLEGIBLE",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU label is placed on a flat surface of the unit.",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU label with a barcode is visible but blurred."
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label is present over the manufacturer barcode location."
+              }
+            ]
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label labeled 'OPAQUE COVER LABEL' is positioned over the manufacturer barcode area."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "ILLEGIBLE",
+        "fnskuValueCompleteness": "UNCERTAIN",
+        "fnskuDetectedValue": null,
+        "imageQualityOverall": "DEGRADED",
+        "imageQualityIssues": [
+          "blur"
+        ],
+        "downstreamCheckVerdict": "UNCERTAIN",
+        "downstreamReasonCode": "TEXT_ILLEGIBLE",
+        "operationalStatus": "REVIEW_REQUIRED",
+        "isFalsePass": false,
+        "isUnsafeConfident": false
+      },
+      {
+        "runIndex": 3,
+        "durationMs": 3459,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "DEGRADED",
+            "issues": [
+              "Image 'label' is heavily blurred, making barcode and text unreadable."
+            ]
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "ILLEGIBLE",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU label placed on flat back/rear surface of the product in image 'label'.",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU label with barcode is visible on the product surface but blurred and illegible."
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "Opaque cover label text stating 'Manufacturer barcode covered completely' is visible on the back view."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "ILLEGIBLE",
+        "fnskuValueCompleteness": "UNCERTAIN",
+        "fnskuDetectedValue": null,
+        "imageQualityOverall": "DEGRADED",
+        "imageQualityIssues": [
+          "Image 'label' is heavily blurred, making barcode and text unreadable."
+        ],
+        "downstreamCheckVerdict": "UNCERTAIN",
+        "downstreamReasonCode": "TEXT_ILLEGIBLE",
+        "operationalStatus": "REVIEW_REQUIRED",
+        "isFalsePass": false,
+        "isUnsafeConfident": false
+      }
+    ],
+    "repeatability": {
+      "exactAgreement": true,
+      "visibilityAgreement": true,
+      "legibilityAgreement": true,
+      "detectedValueAgreement": true,
+      "unsafeConfidentCount": 0
+    }
+  },
+  {
+    "scenarioId": "STRESS-03-PARTIAL-CROP",
+    "name": "Partial Horizontal Crop (45% clipped)",
+    "description": "FNSKU barcode and text completeness (must not hallucinate truncated characters)",
+    "featureChallenged": "FNSKU barcode and text completeness (must not hallucinate truncated characters)",
+    "expectedLegibility": "ILLEGIBLE_OR_UNCERTAIN",
+    "expectedValue": null,
+    "runs": [
+      {
+        "runIndex": 1,
+        "durationMs": 3954,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "DEGRADED",
+            "issues": [
+              "The 'label' view is cropped on the right side, cutting off the barcode and label content."
+            ]
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "LEGIBLE",
+            "valueCompleteness": "PARTIAL",
+            "detectedValue": "X00DUMMY001",
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU placed on a flat surface",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU barcode label is visible but cropped on the right side by the image frame edge."
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label labeled 'OPAQUE COVER LABEL' is placed on the back panel over the manufacturer barcode location."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "LEGIBLE",
+        "fnskuValueCompleteness": "PARTIAL",
+        "fnskuDetectedValue": "X00DUMMY001",
+        "imageQualityOverall": "DEGRADED",
+        "imageQualityIssues": [
+          "The 'label' view is cropped on the right side, cutting off the barcode and label content."
+        ],
+        "downstreamCheckVerdict": "UNCERTAIN",
+        "downstreamReasonCode": "INSUFFICIENT_VISUAL_EVIDENCE",
+        "operationalStatus": "REVIEW_REQUIRED",
+        "isFalsePass": false,
+        "isUnsafeConfident": true
+      },
+      {
+        "runIndex": 2,
+        "durationMs": 3339,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "DEGRADED",
+            "issues": [
+              "The 'label' view is cropped on the right side, cutting off the right portion of the FNSKU barcode and text."
+            ]
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "LEGIBLE",
+            "valueCompleteness": "PARTIAL",
+            "detectedValue": "X00DUMMY001",
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "Placed on a flat surface on the back panel.",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU barcode is visible but cropped on the right edge in the supplied view."
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label labeled 'OPAQUE COVER LABEL' is present, noting that the manufacturer barcode is covered completely."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "LEGIBLE",
+        "fnskuValueCompleteness": "PARTIAL",
+        "fnskuDetectedValue": "X00DUMMY001",
+        "imageQualityOverall": "DEGRADED",
+        "imageQualityIssues": [
+          "The 'label' view is cropped on the right side, cutting off the right portion of the FNSKU barcode and text."
+        ],
+        "downstreamCheckVerdict": "UNCERTAIN",
+        "downstreamReasonCode": "INSUFFICIENT_VISUAL_EVIDENCE",
+        "operationalStatus": "REVIEW_REQUIRED",
+        "isFalsePass": false,
+        "isUnsafeConfident": true
+      },
+      {
+        "runIndex": 3,
+        "durationMs": 3210,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "DEGRADED",
+            "issues": [
+              "The 'label' view crops the right side of the FNSKU barcode and label."
+            ]
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "LEGIBLE",
+            "valueCompleteness": "PARTIAL",
+            "detectedValue": "X00DUMMY001",
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU label placed on a flat surface on the back panel",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU barcode and text 'X00DUMMY001' visible on the flat panel, with the right side cropped by the frame edge."
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label with text 'Manufacturer barcode covered completely' is visible on the back panel."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "LEGIBLE",
+        "fnskuValueCompleteness": "PARTIAL",
+        "fnskuDetectedValue": "X00DUMMY001",
+        "imageQualityOverall": "DEGRADED",
+        "imageQualityIssues": [
+          "The 'label' view crops the right side of the FNSKU barcode and label."
+        ],
+        "downstreamCheckVerdict": "UNCERTAIN",
+        "downstreamReasonCode": "INSUFFICIENT_VISUAL_EVIDENCE",
+        "operationalStatus": "REVIEW_REQUIRED",
+        "isFalsePass": false,
+        "isUnsafeConfident": true
+      }
+    ],
+    "repeatability": {
+      "exactAgreement": true,
+      "visibilityAgreement": true,
+      "legibilityAgreement": true,
+      "detectedValueAgreement": true,
+      "unsafeConfidentCount": 3
+    }
+  },
+  {
+    "scenarioId": "STRESS-04-GLARE-OCCLUSION",
+    "name": "Specular Glare Occlusion",
+    "description": "FNSKU barcode decode under reflective glare (must not reconstruct hidden bars)",
+    "featureChallenged": "FNSKU barcode decode under reflective glare (must not reconstruct hidden bars)",
+    "expectedLegibility": "ILLEGIBLE_OR_UNCERTAIN",
+    "expectedValue": null,
+    "runs": [
+      {
+        "runIndex": 1,
+        "durationMs": 3904,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "GOOD",
+            "issues": []
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "LEGIBLE",
+            "valueCompleteness": "COMPLETE",
+            "detectedValue": "X00DUMMY001",
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU label placed on a flat outer surface",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU label with barcode and text X00DUMMY001 visible on a flat surface"
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label is placed over the manufacturer barcode location"
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "LEGIBLE",
+        "fnskuValueCompleteness": "COMPLETE",
+        "fnskuDetectedValue": "X00DUMMY001",
+        "imageQualityOverall": "GOOD",
+        "imageQualityIssues": [],
+        "downstreamCheckVerdict": "PASS",
+        "downstreamReasonCode": "REQUIREMENT_SATISFIED",
+        "operationalStatus": "READY",
+        "isFalsePass": true,
+        "isUnsafeConfident": false
+      },
+      {
+        "runIndex": 2,
+        "durationMs": 3002,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "GOOD",
+            "issues": []
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "LEGIBLE",
+            "valueCompleteness": "COMPLETE",
+            "detectedValue": "X00DUMMY001",
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU label placed on flat outer surface",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU barcode and text X00DUMMY001 visible on a flat surface."
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label is present, covering the manufacturer barcode completely."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "LEGIBLE",
+        "fnskuValueCompleteness": "COMPLETE",
+        "fnskuDetectedValue": "X00DUMMY001",
+        "imageQualityOverall": "GOOD",
+        "imageQualityIssues": [],
+        "downstreamCheckVerdict": "PASS",
+        "downstreamReasonCode": "REQUIREMENT_SATISFIED",
+        "operationalStatus": "READY",
+        "isFalsePass": true,
+        "isUnsafeConfident": false
+      },
+      {
+        "runIndex": 3,
+        "durationMs": 2625,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "GOOD",
+            "issues": []
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "LEGIBLE",
+            "valueCompleteness": "COMPLETE",
+            "detectedValue": "X00DUMMY001",
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU label is placed on a flat outer surface",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU barcode label with text X00DUMMY001 visible on a flat surface"
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label is placed over the manufacturer barcode location"
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "LEGIBLE",
+        "fnskuValueCompleteness": "COMPLETE",
+        "fnskuDetectedValue": "X00DUMMY001",
+        "imageQualityOverall": "GOOD",
+        "imageQualityIssues": [],
+        "downstreamCheckVerdict": "PASS",
+        "downstreamReasonCode": "REQUIREMENT_SATISFIED",
+        "operationalStatus": "READY",
+        "isFalsePass": true,
+        "isUnsafeConfident": false
+      }
+    ],
+    "repeatability": {
+      "exactAgreement": true,
+      "visibilityAgreement": true,
+      "legibilityAgreement": true,
+      "detectedValueAgreement": true,
+      "unsafeConfidentCount": 0
+    }
+  },
+  {
+    "scenarioId": "STRESS-05-LOW-CONTRAST",
+    "name": "Severe Low Contrast & Washout",
+    "description": "Barcode and label detection under extreme underexposure/washout",
+    "featureChallenged": "Barcode and label detection under extreme underexposure/washout",
+    "expectedLegibility": "ILLEGIBLE_OR_UNCERTAIN",
+    "expectedValue": null,
+    "runs": [
+      {
+        "runIndex": 1,
+        "durationMs": 22206,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "GOOD",
+            "issues": []
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "LEGIBLE",
+            "valueCompleteness": "COMPLETE",
+            "detectedValue": "X00DUMMY001",
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU label placed flat on the back outer surface of the packaging",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU barcode label visible on the back panel"
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label is placed over the manufacturer barcode location"
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "LEGIBLE",
+        "fnskuValueCompleteness": "COMPLETE",
+        "fnskuDetectedValue": "X00DUMMY001",
+        "imageQualityOverall": "GOOD",
+        "imageQualityIssues": [],
+        "downstreamCheckVerdict": "PASS",
+        "downstreamReasonCode": "REQUIREMENT_SATISFIED",
+        "operationalStatus": "READY",
+        "isFalsePass": true,
+        "isUnsafeConfident": false
+      },
+      {
+        "runIndex": 2,
+        "durationMs": 2662,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "GOOD",
+            "issues": []
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "LEGIBLE",
+            "valueCompleteness": "COMPLETE",
+            "detectedValue": "X00DUMMY001",
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU barcode label placed on flat outer surface",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU label with barcode and value X00DUMMY001 visible on flat surface."
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "Opaque cover label is present covering the manufacturer barcode completely."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "LEGIBLE",
+        "fnskuValueCompleteness": "COMPLETE",
+        "fnskuDetectedValue": "X00DUMMY001",
+        "imageQualityOverall": "GOOD",
+        "imageQualityIssues": [],
+        "downstreamCheckVerdict": "PASS",
+        "downstreamReasonCode": "REQUIREMENT_SATISFIED",
+        "operationalStatus": "READY",
+        "isFalsePass": true,
+        "isUnsafeConfident": false
+      },
+      {
+        "runIndex": 3,
+        "durationMs": 2741,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "GOOD",
+            "issues": []
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "VISIBLE",
+            "legibility": "LEGIBLE",
+            "valueCompleteness": "COMPLETE",
+            "detectedValue": "X00DUMMY001",
+            "placement": "FLAT_SURFACE",
+            "placementDescription": "FNSKU label placed on a flat surface",
+            "evidence": [
+              {
+                "imageId": "label",
+                "description": "FNSKU label with barcode and text X00DUMMY001 is visible on a flat surface."
+              }
+            ]
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label is placed over the manufacturer barcode location."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "VISIBLE",
+        "fnskuLegibility": "LEGIBLE",
+        "fnskuValueCompleteness": "COMPLETE",
+        "fnskuDetectedValue": "X00DUMMY001",
+        "imageQualityOverall": "GOOD",
+        "imageQualityIssues": [],
+        "downstreamCheckVerdict": "PASS",
+        "downstreamReasonCode": "REQUIREMENT_SATISFIED",
+        "operationalStatus": "READY",
+        "isFalsePass": true,
+        "isUnsafeConfident": false
+      }
+    ],
+    "repeatability": {
+      "exactAgreement": true,
+      "visibilityAgreement": true,
+      "legibilityAgreement": true,
+      "detectedValueAgreement": true,
+      "unsafeConfidentCount": 0
+    }
+  },
+  {
+    "scenarioId": "STRESS-06-PARTIAL-LABEL",
+    "name": "Corner View Only (Partial Label)",
+    "description": "Missing label view (must not claim absence of label on product)",
+    "featureChallenged": "Missing label view (must not claim absence of label on product)",
+    "expectedLegibility": "NOT_DETECTED_OR_UNCERTAIN",
+    "expectedValue": null,
+    "runs": [
+      {
+        "runIndex": 1,
+        "durationMs": 2394,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "DEGRADED",
+            "issues": [
+              "Label image is severely cropped and incomplete"
+            ]
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "placement": "UNCERTAIN",
+            "placementDescription": null,
+            "evidence": []
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "Opaque cover label is placed over the manufacturer barcode area on the back view."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "NOT_DETECTED",
+        "fnskuLegibility": "UNCERTAIN",
+        "fnskuValueCompleteness": "UNCERTAIN",
+        "fnskuDetectedValue": null,
+        "imageQualityOverall": "DEGRADED",
+        "imageQualityIssues": [
+          "Label image is severely cropped and incomplete"
+        ],
+        "downstreamCheckVerdict": "UNCERTAIN",
+        "downstreamReasonCode": "FEATURE_NOT_DETECTED",
+        "operationalStatus": "REVIEW_REQUIRED",
+        "isFalsePass": false,
+        "isUnsafeConfident": false
+      },
+      {
+        "runIndex": 2,
+        "durationMs": 2855,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "DEGRADED",
+            "issues": [
+              "Label image is severely cropped and truncated"
+            ]
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "placement": "UNCERTAIN",
+            "placementDescription": null,
+            "evidence": []
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label is placed over the manufacturer barcode location."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "NOT_DETECTED",
+        "fnskuLegibility": "UNCERTAIN",
+        "fnskuValueCompleteness": "UNCERTAIN",
+        "fnskuDetectedValue": null,
+        "imageQualityOverall": "DEGRADED",
+        "imageQualityIssues": [
+          "Label image is severely cropped and truncated"
+        ],
+        "downstreamCheckVerdict": "UNCERTAIN",
+        "downstreamReasonCode": "FEATURE_NOT_DETECTED",
+        "operationalStatus": "REVIEW_REQUIRED",
+        "isFalsePass": false,
+        "isUnsafeConfident": false
+      },
+      {
+        "runIndex": 3,
+        "durationMs": 2714,
+        "observation": {
+          "unitId": "DEMO-COMPLIANT",
+          "imageQuality": {
+            "overall": "DEGRADED",
+            "issues": [
+              "Label image is cropped and partially cut off, preventing full inspection of the label."
+            ]
+          },
+          "polybag": {
+            "visibility": "NOT_DETECTED",
+            "sealStatus": "UNCERTAIN",
+            "packagingType": "NONE_DETECTED",
+            "evidence": []
+          },
+          "suffocationWarning": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedText": null,
+            "evidence": []
+          },
+          "fnsku": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "placement": "UNCERTAIN",
+            "placementDescription": null,
+            "evidence": []
+          },
+          "manufacturerBarcode": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "valueCompleteness": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "manufacturerBarcodeCoverage": {
+            "status": "COVERED",
+            "coveringType": "OPAQUE_LABEL",
+            "evidence": [
+              {
+                "imageId": "back",
+                "description": "An opaque cover label is placed over the manufacturer barcode location, stating 'Manufacturer barcode covered completely'."
+              }
+            ]
+          },
+          "expiryDate": {
+            "visibility": "NOT_DETECTED",
+            "legibility": "UNCERTAIN",
+            "detectedValue": null,
+            "evidence": []
+          },
+          "handlingMarks": [],
+          "otherVisibleIssues": []
+        },
+        "parseSuccess": true,
+        "fnskuVisibility": "NOT_DETECTED",
+        "fnskuLegibility": "UNCERTAIN",
+        "fnskuValueCompleteness": "UNCERTAIN",
+        "fnskuDetectedValue": null,
+        "imageQualityOverall": "DEGRADED",
+        "imageQualityIssues": [
+          "Label image is cropped and partially cut off, preventing full inspection of the label."
+        ],
+        "downstreamCheckVerdict": "UNCERTAIN",
+        "downstreamReasonCode": "FEATURE_NOT_DETECTED",
+        "operationalStatus": "REVIEW_REQUIRED",
+        "isFalsePass": false,
+        "isUnsafeConfident": false
+      }
+    ],
+    "repeatability": {
+      "exactAgreement": true,
+      "visibilityAgreement": true,
+      "legibilityAgreement": true,
+      "detectedValueAgreement": true,
+      "unsafeConfidentCount": 0
+    }
+  }
+]

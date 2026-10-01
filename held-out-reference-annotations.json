@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "title": "Reference Visual Annotations for Held-Out Products (PRODUCT-1 .. PRODUCT-15)",
+    "creationTimestamp": "2026-10-01T10:13:48.971Z",
+    "evaluatorMethod": "Reference visual annotation prior to vision agent execution. NOT two independent human annotators. NOT ground truth.",
+    "notice": "Frozen evaluation asset. Do not edit after pipeline run.",
+    "productsCount": 15
+  },
+  "products": [
+    {
+      "productId": "PRODUCT-1",
+      "imageHashes": {
+        "front": "690db8c754c1e496b44657dc9b07f50e2917aca66912082dfc9ebdfb2a0611dc",
+        "back": "3aa0f3a74a0f54379539206dd0a32f34112e3d22163d02d329205de2f38cf1d0",
+        "label": "f843917776eb415569404bb7921ffe56e332fd9a03d44577fd0cbe49526d534a"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "YES",
+        "expiry_readable": "YES",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Cintu Euro Pop confectionery jar with yellow lid. EAN 8906071886920. Expiry Use By AUG 26."
+    },
+    {
+      "productId": "PRODUCT-2",
+      "imageHashes": {
+        "front": "b491a8e984c0c0ad5740c1367f9f3a5f89661a425467ec1cdbf628c14fa3af2d",
+        "back": "f3f9cac95560a6a59127dd7095545c1aaf1914771f236ff7d3486437f5dcf4e5",
+        "label": "9501af8d44035e6a98f21b69685c1fae1afd4e3024889890b3ee2795b910606d"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "NO",
+        "expiry_readable": "NOT_APPLICABLE",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Kangaro No. 10-1M staples cardboard box. Barcode 8901057510028. No expiry."
+    },
+    {
+      "productId": "PRODUCT-3",
+      "imageHashes": {
+        "front": "ac17f3ce27e95ba1933b3596cd8757020e81ce703f81ca43b0ad11adddaded73",
+        "back": "19543d0f21fb1dd270cf0e7bf710b6bd6d157088c3fd4754fc8267a748bd8488",
+        "label": "bbb6da11c036c976bc641a6384b0abeb26fda751108e1386bd4688c7192df8aa"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "YES",
+        "expiry_readable": "YES",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Mysore Sandal soap gift box. Barcode 8901287100815. Expiry: Best before 3 years from MFD June 2026."
+    },
+    {
+      "productId": "PRODUCT-4",
+      "imageHashes": {
+        "front": "9a215192c42897319706dbb08d7a31f55d2fd3fb5d9708425bf5204adfb2f167",
+        "back": "5b688d3a08c7399c11d3a6395f71bb3188f4578dc27cf76b63fe74b457767d84",
+        "label": "c9e6b2dea0debe8fbb2e791ad1f3f197defdd7d862f4650618e8c54901fb65df"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "NO",
+        "expiry_readable": "NOT_APPLICABLE",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Airtel 5G Outdoor CPE corrugated carton. Multiple device barcodes (S/N AZYODC2F00042654, IMEI, MAC). No expiry."
+    },
+    {
+      "productId": "PRODUCT-5",
+      "imageHashes": {
+        "front": "b43e0a60e5421edcef56597e71e4b8ae5038a021148d8fd0f1acc3d6d6d016f1",
+        "back": "22a6c63852d60eba5a9caa9d40b56c89ebb69f3ae711d3cce976748ad0b7e9e0",
+        "label": "cd1926ef29f719227faa82e0828246eaf2474e0b77f5908964469d178a7971f0"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "NO",
+        "expiry_readable": "NOT_APPLICABLE",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Cello Gold Crust Insulated Hot Pot box. Barcode 8901372241614. No expiry."
+    },
+    {
+      "productId": "PRODUCT-6",
+      "imageHashes": {
+        "front": "6a2e530ecf5b724371d6321639f0898b9f49740dfa1ba9306bebb47ff916b2d6",
+        "back": "f7017d4be069ae7c78d4d0674d0fb2f5dd463cbb90eb44157c7d48ba802af989",
+        "label": "f515885ff6d8f51c85d3b45e7ecb3fa97657e6295b6c0ae46c48d290771411ac"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "NO",
+        "manufacturer_barcode_readable": "NOT_APPLICABLE",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "NO",
+        "expiry_readable": "NOT_APPLICABLE",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Airtel Xstream TV box. BIS mark and logos, no barcode printed on captured sides. No expiry."
+    },
+    {
+      "productId": "PRODUCT-7",
+      "imageHashes": {
+        "front": "4d3b4611ceaf36441784c971798d1cde2b31927f2eea6c7f6a4fc4d819064539",
+        "back": "c55999d418618f73a230620ff708b774eb344d9d2a0f9ba7df0f0b4348a9f32c",
+        "label": "50ac76b8a8494cd4effa32d0a91b141ff8382d019a431abaafb58b08f86b2947"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "NO",
+        "expiry_readable": "NOT_APPLICABLE",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Oxford English Mini Dictionary paperback book. ISBN barcode 9780195692587. No expiry."
+    },
+    {
+      "productId": "PRODUCT-8",
+      "imageHashes": {
+        "front": "5fbfb56e6e4638b89c95f6107a3cf1d416b30b145de57f075de2258170f71826",
+        "back": "53a736174f77777c874aeae5fe8330b60a1e05b2a4441050c3d4038ab87e0564",
+        "label": "ae958e537e6005c51fb4d3bc07ee2a25eefa697dd0024970de3082a45601194b"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "NO",
+        "expiry_readable": "NOT_APPLICABLE",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "boAt Airdopes 141 carton. Barcodes 8904130887093 and 1000000241. No expiry."
+    },
+    {
+      "productId": "PRODUCT-9",
+      "imageHashes": {
+        "front": "f838fa3c8a773ac2a0c95c1701546d184c536d6af3cdf2499bce65e1efbdf1e0",
+        "back": "6a0cf0588775e79f5b3af61daae3bce7bac582a8fe875108c6da175f5476a64d",
+        "label": "84933da037a11fb1540dc4c2e0ed56ae7b1c4fe15f62a1e37c9413c9e399d37b"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "NO",
+        "expiry_readable": "NOT_APPLICABLE",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Fire-Boltt Legend Smart Watch box. Barcode 8906119246334. No expiry."
+    },
+    {
+      "productId": "PRODUCT-10",
+      "imageHashes": {
+        "front": "367dcc5b8ded5798782715a3eea59f471c9bd5bf96ec404850dc3999bcf2ee55",
+        "back": "748427e55802a9690268b08bc4cd5fc465eae696d3de61dfada6c27f218df1cb",
+        "label": "7405bf7ff3e19155d18d3afaeb4ddd379f9f69d7c66eae6ba093e392c78d7a45"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "NO",
+        "expiry_readable": "NOT_APPLICABLE",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Calligraphy 4Nib Set box with blister display window. Barcode 6938750036229. No expiry."
+    },
+    {
+      "productId": "PRODUCT-11",
+      "imageHashes": {
+        "front": "0f6d0ab8ab07a160e1a2481e09d956ce6e7d21e384d4ffd31b2b74213ae1f1fa",
+        "back": "f782dddb1f3371cfb422f362cceb859fb10a627ec16d7ab0efd5d2e01ae0fc70",
+        "label": "3fdd9bc2b86b0b4876fa9dd92e0570589115373052104ddc4ecc512485fce941"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "NO",
+        "expiry_readable": "NOT_APPLICABLE",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Camel Student Poster Colours metal tin box. Barcode 8901425000434. No expiry."
+    },
+    {
+      "productId": "PRODUCT-12",
+      "imageHashes": {
+        "front": "1423e2af11ab25044a78fae61e0f34f9a6882752b39696ebee79512ec281b4b1",
+        "back": "cd5e926e78feb00b2efcdce8186b5776a40601cfb1c86319895b1cdd76630eab",
+        "label": "507d482409ad6204b8e544cdda99d09eb660f364ccb8214caafc133e7dbbe85b"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "NO",
+        "expiry_readable": "NOT_APPLICABLE",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Diprobase-G Plus cream carton. Barcode 8901296045435. Expiry not shown on side/front/back panels."
+    },
+    {
+      "productId": "PRODUCT-13",
+      "imageHashes": {
+        "front": "7cdc7a04265043e03f730d85d2d5dfaf28e38638bc7cc5cc6ff0a4537779a2eb",
+        "back": "2e8c1cef91376fdbef66b484960930feb747a75970c110afbc0bb9b46a40280e",
+        "label": "0f1984f63d2ecd783ab4a9d984dd876fd8ab1d85d0b31447c5eb719105ba07a0"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "YES",
+        "expiry_readable": "YES",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Gabany-M tablets pharma carton. Barcode 8904250627722. Expiry Date: 09/2027."
+    },
+    {
+      "productId": "PRODUCT-14",
+      "imageHashes": {
+        "front": "1122d7476b615075d28fc282625ac02e0cc137319cff1a13513e63b6cce09a02",
+        "back": "8ad7c32aabce7e1684632ce7f09474eeb5e80788ee1c14054be563bf48971bf0",
+        "label": "c228918fc9eb2b70a4fd4a7f0bc942120a50f25cc862f9cd9de13e95dcc873ae"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "NO",
+        "expiry_readable": "NOT_APPLICABLE",
+        "handling_mark_visible": "NO",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Magnetic Chess Big board game box. Barcode 8904326203256. No expiry."
+    },
+    {
+      "productId": "PRODUCT-15",
+      "imageHashes": {
+        "front": "b902e2f36b2161a1165a3b0abf4eada3180b5dcda119a96ea175851992fa03fd",
+        "back": "29fffe79d9897f9e7b4b0a81e5ca5e7aefaab77a91dc3912a936fc1fd45b486f",
+        "label": "938b8e613cdb4400e933cc97c4c218e6bc3d1639e7f6ab54ffe7f57f30770d50"
+      },
+      "annotations": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_readable": "YES",
+        "fnsku_visible": "NO",
+        "fnsku_value": "NOT_APPLICABLE",
+        "polybag_present": "NO",
+        "polybag_sealed": "NOT_APPLICABLE",
+        "suffocation_warning_visible": "NOT_APPLICABLE",
+        "expiry_visible": "NO",
+        "expiry_readable": "NOT_APPLICABLE",
+        "handling_mark_visible": "YES",
+        "photo_quality_sufficient": "YES"
+      },
+      "notes": "Prestige Nutri-Mix 2.0 appliance carton. Barcode 8901365431503. Handling marks visible: This Side Up arrows & Keep Dry umbrella."
+    }
+  ]
+}

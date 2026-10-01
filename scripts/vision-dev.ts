@@ -58,7 +58,7 @@ async function main() {
   const arg = process.argv[2] || "UNIT-0001";
 
   if (arg.toUpperCase() === "ALL") {
-    const units = ["UNIT-0001", "UNIT-0002", "UNIT-0003"];
+    const units = ["UNIT-0001", "UNIT-0002"];
     for (const u of units) {
       console.log(`=== ${u} ===`);
       await runUnit(u);

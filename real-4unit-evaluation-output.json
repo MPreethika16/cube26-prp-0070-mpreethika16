@@ -1,0 +1,1278 @@
+[
+  {
+    "unitId": "UNIT-0001",
+    "workOrder": {
+      "workOrderId": "WO-3000",
+      "unitId": "UNIT-0001",
+      "sku": "SKU-POUCH-TECH",
+      "asin": "B0DUMMY101",
+      "expectedFnsku": "X00DUMMY001",
+      "requirements": {
+        "polybag": "NOT_REQUIRED",
+        "suffocationWarning": "NOT_REQUIRED",
+        "expiryDate": "NOT_REQUIRED",
+        "handlingMarks": {
+          "state": "NOT_REQUIRED",
+          "requiredMarks": []
+        }
+      }
+    },
+    "readiness": {
+      "status": "READY",
+      "slotStatuses": {
+        "front": {
+          "slotId": "front",
+          "status": "READY",
+          "issues": [],
+          "width": 1200,
+          "height": 1600,
+          "byteSize": 69749
+        },
+        "back": {
+          "slotId": "back",
+          "status": "READY",
+          "issues": [],
+          "width": 900,
+          "height": 1600,
+          "byteSize": 85296
+        },
+        "label": {
+          "slotId": "label",
+          "status": "READY",
+          "issues": [],
+          "width": 900,
+          "height": 1126,
+          "byteSize": 80352
+        }
+      },
+      "suppliedSlots": [
+        "front",
+        "back",
+        "label"
+      ],
+      "missingSlots": [],
+      "warnings": [],
+      "canInspect": true
+    },
+    "observation": {
+      "unitId": "UNIT-0001",
+      "imageQuality": {
+        "overall": "GOOD",
+        "issues": []
+      },
+      "polybag": {
+        "visibility": "NOT_DETECTED",
+        "sealStatus": "UNCERTAIN",
+        "packagingType": "NONE_DETECTED",
+        "evidence": []
+      },
+      "suffocationWarning": {
+        "visibility": "NOT_DETECTED",
+        "legibility": "UNCERTAIN",
+        "detectedText": null,
+        "evidence": []
+      },
+      "fnsku": {
+        "visibility": "NOT_DETECTED",
+        "legibility": "UNCERTAIN",
+        "valueCompleteness": "UNCERTAIN",
+        "detectedValue": null,
+        "placement": "UNCERTAIN",
+        "placementDescription": null,
+        "evidence": []
+      },
+      "manufacturerBarcode": {
+        "visibility": "VISIBLE",
+        "legibility": "LEGIBLE",
+        "valueCompleteness": "COMPLETE",
+        "detectedValue": "8906126921460",
+        "evidence": [
+          {
+            "imageId": "back",
+            "description": "Manufacturer barcode is visible on the product box label."
+          }
+        ]
+      },
+      "manufacturerBarcodeCoverage": {
+        "status": "NOT_COVERED",
+        "coveringType": null,
+        "evidence": [
+          {
+            "imageId": "back",
+            "description": "Manufacturer barcode is exposed and uncovered on the product box label."
+          }
+        ]
+      },
+      "expiryDate": {
+        "visibility": "NOT_DETECTED",
+        "legibility": "UNCERTAIN",
+        "detectedValue": null,
+        "evidence": []
+      },
+      "handlingMarks": [],
+      "otherVisibleIssues": []
+    },
+    "inspectionRecord": {
+      "inspectionId": "INSP-UNIT-0001-1790840127948",
+      "unitId": "UNIT-0001",
+      "workOrderId": "WO-3000",
+      "sku": "SKU-POUCH-TECH",
+      "asin": "B0DUMMY101",
+      "imageQuality": {
+        "overall": "GOOD",
+        "issues": []
+      },
+      "checks": [
+        {
+          "checkId": "AMZN-POL-FNSKU-IDENTITY-2026:FNSKU_IDENTITY",
+          "checkType": "FNSKU_IDENTITY",
+          "applicability": "APPLICABLE",
+          "verdict": "UNCERTAIN",
+          "reasonCode": "FEATURE_NOT_DETECTED",
+          "explanation": "FNSKU barcode label was not detected in supplied photographs. This does not confirm physical absence.",
+          "rule": {
+            "ruleId": "AMZN-POL-FNSKU-IDENTITY-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": null
+        },
+        {
+          "checkId": "AMZN-POL-POLYBAG-PRESENCE-2026:POLYBAG_PRESENCE",
+          "checkType": "POLYBAG_PRESENCE",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Polybag packaging is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-POLYBAG-PRESENCE-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "NOT_DETECTED"
+        },
+        {
+          "checkId": "AMZN-POL-POLYBAG-SEAL-2026:POLYBAG_SEAL",
+          "checkType": "POLYBAG_SEAL",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Polybag packaging is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-POLYBAG-SEAL-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "UNCERTAIN"
+        },
+        {
+          "checkId": "AMZN-POL-SUFFOCATION-WARN-2026:SUFFOCATION_WARNING_PRESENCE",
+          "checkType": "SUFFOCATION_WARNING_PRESENCE",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Suffocation warning is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-SUFFOCATION-WARN-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "NOT_DETECTED"
+        },
+        {
+          "checkId": "AMZN-POL-SUFFOCATION-WARN-LEG-2026:SUFFOCATION_WARNING_LEGIBILITY",
+          "checkType": "SUFFOCATION_WARNING_LEGIBILITY",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Suffocation warning is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-SUFFOCATION-WARN-LEG-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "UNCERTAIN"
+        },
+        {
+          "checkId": "AMZN-POL-BARCODE-COVERAGE-2026:MANUFACTURER_BARCODE_COVERAGE",
+          "checkType": "MANUFACTURER_BARCODE_COVERAGE",
+          "applicability": "APPLICABLE",
+          "verdict": "FAIL",
+          "reasonCode": "REQUIREMENT_VIOLATED",
+          "explanation": "Original manufacturer barcode is visibly uncovered on the product (positive contradictory defect evidence).",
+          "rule": {
+            "ruleId": "AMZN-POL-BARCODE-COVERAGE-2026",
+            "version": "2026.1"
+          },
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Manufacturer barcode is visible on the product box label."
+            },
+            {
+              "imageId": "back",
+              "description": "Manufacturer barcode is exposed and uncovered on the product box label."
+            }
+          ],
+          "observedValue": "8906126921460"
+        },
+        {
+          "checkId": "AMZN-POL-EXPIRY-VISIBILITY-2026:EXPIRY_VISIBILITY",
+          "checkType": "EXPIRY_VISIBILITY",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Expiry date labeling is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-EXPIRY-VISIBILITY-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": null
+        },
+        {
+          "checkId": "AMZN-POL-EXPIRY-LEGIBILITY-2026:EXPIRY_LEGIBILITY",
+          "checkType": "EXPIRY_LEGIBILITY",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Expiry date labeling is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-EXPIRY-LEGIBILITY-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "UNCERTAIN"
+        },
+        {
+          "checkId": "AMZN-POL-HANDLING-MARKS-2026:HANDLING_MARKS",
+          "checkType": "HANDLING_MARKS",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "No handling marks are required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-HANDLING-MARKS-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "none_required"
+        },
+        {
+          "checkId": "AMZN-POL-FNSKU-PLACEMENT-2026:FNSKU_PLACEMENT",
+          "checkType": "FNSKU_PLACEMENT",
+          "applicability": "APPLICABLE",
+          "verdict": "UNCERTAIN",
+          "reasonCode": "FEATURE_NOT_DETECTED",
+          "explanation": "FNSKU barcode was not detected in supplied photographs; placement cannot be evaluated.",
+          "rule": {
+            "ruleId": "AMZN-POL-FNSKU-PLACEMENT-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": null
+        }
+      ],
+      "metadata": {
+        "inspectedAt": "2026-10-01T07:35:27.940Z",
+        "visionModel": "gemini-2.5-flash",
+        "visionRequestCount": 1
+      }
+    },
+    "operationalStatus": {
+      "status": "STOP_AND_FIX",
+      "passCount": 0,
+      "failCount": 1,
+      "uncertainCount": 2,
+      "notApplicableCount": 7,
+      "blockingCheckTypes": [
+        "MANUFACTURER_BARCODE_COVERAGE"
+      ],
+      "uncertainCheckTypes": [
+        "FNSKU_IDENTITY",
+        "FNSKU_PLACEMENT"
+      ]
+    },
+    "recoveryPlan": {
+      "unitId": "UNIT-0001",
+      "requiresEvidence": false,
+      "uncertainCheckCount": 0,
+      "actions": []
+    },
+    "routingDecision": "FIX_PREP"
+  },
+  {
+    "unitId": "UNIT-0002",
+    "workOrder": {
+      "workOrderId": "WO-3000",
+      "unitId": "UNIT-0002",
+      "sku": "SKU-CANDLE-3",
+      "asin": "B0DUMMY964",
+      "expectedFnsku": "X00DUMMY002",
+      "requirements": {
+        "polybag": "NOT_REQUIRED",
+        "suffocationWarning": "NOT_REQUIRED",
+        "expiryDate": "NOT_REQUIRED",
+        "handlingMarks": {
+          "state": "REQUIRED",
+          "requiredMarks": [
+            "fragile"
+          ]
+        }
+      }
+    },
+    "readiness": {
+      "status": "READY",
+      "slotStatuses": {
+        "front": {
+          "slotId": "front",
+          "status": "READY",
+          "issues": [],
+          "width": 1200,
+          "height": 1600,
+          "byteSize": 74301
+        },
+        "back": {
+          "slotId": "back",
+          "status": "READY",
+          "issues": [],
+          "width": 1200,
+          "height": 1600,
+          "byteSize": 153212
+        },
+        "label": {
+          "slotId": "label",
+          "status": "READY",
+          "issues": [],
+          "width": 1200,
+          "height": 1600,
+          "byteSize": 104074
+        }
+      },
+      "suppliedSlots": [
+        "front",
+        "back",
+        "label"
+      ],
+      "missingSlots": [],
+      "warnings": [],
+      "canInspect": true
+    },
+    "observation": {
+      "unitId": "UNIT-0002",
+      "imageQuality": {
+        "overall": "GOOD",
+        "issues": []
+      },
+      "polybag": {
+        "visibility": "NOT_DETECTED",
+        "sealStatus": "UNCERTAIN",
+        "packagingType": "NONE_DETECTED",
+        "evidence": []
+      },
+      "suffocationWarning": {
+        "visibility": "NOT_DETECTED",
+        "legibility": "UNCERTAIN",
+        "detectedText": null,
+        "evidence": []
+      },
+      "fnsku": {
+        "visibility": "NOT_DETECTED",
+        "legibility": "UNCERTAIN",
+        "valueCompleteness": "UNCERTAIN",
+        "detectedValue": null,
+        "placement": "UNCERTAIN",
+        "placementDescription": null,
+        "evidence": []
+      },
+      "manufacturerBarcode": {
+        "visibility": "VISIBLE",
+        "legibility": "LEGIBLE",
+        "valueCompleteness": "COMPLETE",
+        "detectedValue": "8906050590022",
+        "evidence": [
+          {
+            "imageId": "back",
+            "description": "Manufacturer barcode is visible on the bottom right of the back panel."
+          },
+          {
+            "imageId": "label",
+            "description": "Manufacturer barcode is visible close-up."
+          }
+        ]
+      },
+      "manufacturerBarcodeCoverage": {
+        "status": "NOT_COVERED",
+        "coveringType": null,
+        "evidence": [
+          {
+            "imageId": "back",
+            "description": "Manufacturer barcode is fully visible and exposed."
+          }
+        ]
+      },
+      "expiryDate": {
+        "visibility": "VISIBLE",
+        "legibility": "LEGIBLE",
+        "detectedValue": "10/2027",
+        "evidence": [
+          {
+            "imageId": "back",
+            "description": "Expiry date printed on the back panel."
+          }
+        ]
+      },
+      "handlingMarks": [],
+      "otherVisibleIssues": []
+    },
+    "inspectionRecord": {
+      "inspectionId": "INSP-UNIT-0002-1790840130970",
+      "unitId": "UNIT-0002",
+      "workOrderId": "WO-3000",
+      "sku": "SKU-CANDLE-3",
+      "asin": "B0DUMMY964",
+      "imageQuality": {
+        "overall": "GOOD",
+        "issues": []
+      },
+      "checks": [
+        {
+          "checkId": "AMZN-POL-FNSKU-IDENTITY-2026:FNSKU_IDENTITY",
+          "checkType": "FNSKU_IDENTITY",
+          "applicability": "APPLICABLE",
+          "verdict": "UNCERTAIN",
+          "reasonCode": "FEATURE_NOT_DETECTED",
+          "explanation": "FNSKU barcode label was not detected in supplied photographs. This does not confirm physical absence.",
+          "rule": {
+            "ruleId": "AMZN-POL-FNSKU-IDENTITY-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": null
+        },
+        {
+          "checkId": "AMZN-POL-POLYBAG-PRESENCE-2026:POLYBAG_PRESENCE",
+          "checkType": "POLYBAG_PRESENCE",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Polybag packaging is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-POLYBAG-PRESENCE-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "NOT_DETECTED"
+        },
+        {
+          "checkId": "AMZN-POL-POLYBAG-SEAL-2026:POLYBAG_SEAL",
+          "checkType": "POLYBAG_SEAL",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Polybag packaging is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-POLYBAG-SEAL-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "UNCERTAIN"
+        },
+        {
+          "checkId": "AMZN-POL-SUFFOCATION-WARN-2026:SUFFOCATION_WARNING_PRESENCE",
+          "checkType": "SUFFOCATION_WARNING_PRESENCE",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Suffocation warning is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-SUFFOCATION-WARN-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "NOT_DETECTED"
+        },
+        {
+          "checkId": "AMZN-POL-SUFFOCATION-WARN-LEG-2026:SUFFOCATION_WARNING_LEGIBILITY",
+          "checkType": "SUFFOCATION_WARNING_LEGIBILITY",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Suffocation warning is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-SUFFOCATION-WARN-LEG-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "UNCERTAIN"
+        },
+        {
+          "checkId": "AMZN-POL-BARCODE-COVERAGE-2026:MANUFACTURER_BARCODE_COVERAGE",
+          "checkType": "MANUFACTURER_BARCODE_COVERAGE",
+          "applicability": "APPLICABLE",
+          "verdict": "FAIL",
+          "reasonCode": "REQUIREMENT_VIOLATED",
+          "explanation": "Original manufacturer barcode is visibly uncovered on the product (positive contradictory defect evidence).",
+          "rule": {
+            "ruleId": "AMZN-POL-BARCODE-COVERAGE-2026",
+            "version": "2026.1"
+          },
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Manufacturer barcode is visible on the bottom right of the back panel."
+            },
+            {
+              "imageId": "label",
+              "description": "Manufacturer barcode is visible close-up."
+            },
+            {
+              "imageId": "back",
+              "description": "Manufacturer barcode is fully visible and exposed."
+            }
+          ],
+          "observedValue": "8906050590022"
+        },
+        {
+          "checkId": "AMZN-POL-EXPIRY-VISIBILITY-2026:EXPIRY_VISIBILITY",
+          "checkType": "EXPIRY_VISIBILITY",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Expiry date labeling is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-EXPIRY-VISIBILITY-2026",
+            "version": "2026.1"
+          },
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Expiry date printed on the back panel."
+            }
+          ],
+          "observedValue": "10/2027"
+        },
+        {
+          "checkId": "AMZN-POL-EXPIRY-LEGIBILITY-2026:EXPIRY_LEGIBILITY",
+          "checkType": "EXPIRY_LEGIBILITY",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Expiry date labeling is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-EXPIRY-LEGIBILITY-2026",
+            "version": "2026.1"
+          },
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Expiry date printed on the back panel."
+            }
+          ],
+          "observedValue": "LEGIBLE"
+        },
+        {
+          "checkId": "AMZN-POL-HANDLING-MARKS-2026:HANDLING_MARKS",
+          "checkType": "HANDLING_MARKS",
+          "applicability": "APPLICABLE",
+          "verdict": "UNCERTAIN",
+          "reasonCode": "FEATURE_NOT_DETECTED",
+          "explanation": "Required handling mark(s) [fragile] were not positively verified in supplied photographs. Non-detection does not confirm physical absence.",
+          "rule": {
+            "ruleId": "AMZN-POL-HANDLING-MARKS-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "none_detected"
+        },
+        {
+          "checkId": "AMZN-POL-FNSKU-PLACEMENT-2026:FNSKU_PLACEMENT",
+          "checkType": "FNSKU_PLACEMENT",
+          "applicability": "APPLICABLE",
+          "verdict": "UNCERTAIN",
+          "reasonCode": "FEATURE_NOT_DETECTED",
+          "explanation": "FNSKU barcode was not detected in supplied photographs; placement cannot be evaluated.",
+          "rule": {
+            "ruleId": "AMZN-POL-FNSKU-PLACEMENT-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": null
+        }
+      ],
+      "metadata": {
+        "inspectedAt": "2026-10-01T07:35:30.969Z",
+        "visionModel": "gemini-2.5-flash",
+        "visionRequestCount": 1
+      }
+    },
+    "operationalStatus": {
+      "status": "STOP_AND_FIX",
+      "passCount": 0,
+      "failCount": 1,
+      "uncertainCount": 3,
+      "notApplicableCount": 6,
+      "blockingCheckTypes": [
+        "MANUFACTURER_BARCODE_COVERAGE"
+      ],
+      "uncertainCheckTypes": [
+        "FNSKU_IDENTITY",
+        "HANDLING_MARKS",
+        "FNSKU_PLACEMENT"
+      ]
+    },
+    "recoveryPlan": {
+      "unitId": "UNIT-0002",
+      "requiresEvidence": false,
+      "uncertainCheckCount": 0,
+      "actions": []
+    },
+    "routingDecision": "FIX_PREP"
+  },
+  {
+    "unitId": "REAL-PACKAGE-001",
+    "workOrder": {
+      "workOrderId": "WO-REAL-PKG-01",
+      "unitId": "REAL-PACKAGE-001",
+      "sku": "SKU-CLOTHING-APPAR",
+      "asin": "B0REALPKG01",
+      "expectedFnsku": "X00REALPKG01",
+      "requirements": {
+        "polybag": "REQUIRED",
+        "suffocationWarning": "REQUIRED",
+        "expiryDate": "NOT_REQUIRED",
+        "handlingMarks": {
+          "state": "NOT_REQUIRED",
+          "requiredMarks": []
+        }
+      }
+    },
+    "readiness": {
+      "status": "READY",
+      "slotStatuses": {
+        "front": {
+          "slotId": "front",
+          "status": "READY",
+          "issues": [],
+          "width": 900,
+          "height": 1600,
+          "byteSize": 68254
+        },
+        "back": {
+          "slotId": "back",
+          "status": "READY",
+          "issues": [],
+          "width": 900,
+          "height": 1600,
+          "byteSize": 97139
+        },
+        "label": {
+          "slotId": "label",
+          "status": "READY",
+          "issues": [],
+          "width": 900,
+          "height": 1600,
+          "byteSize": 108323
+        }
+      },
+      "suppliedSlots": [
+        "front",
+        "back",
+        "label"
+      ],
+      "missingSlots": [],
+      "warnings": [],
+      "canInspect": true
+    },
+    "observation": {
+      "unitId": "REAL-PACKAGE-001",
+      "imageQuality": {
+        "overall": "GOOD",
+        "issues": []
+      },
+      "polybag": {
+        "visibility": "VISIBLE",
+        "sealStatus": "SEALED",
+        "packagingType": "POLYBAG",
+        "evidence": [
+          {
+            "imageId": "front",
+            "description": "White opaque polybag enclosing the unit with visible seams."
+          }
+        ]
+      },
+      "suffocationWarning": {
+        "visibility": "NOT_DETECTED",
+        "legibility": "UNCERTAIN",
+        "detectedText": null,
+        "evidence": []
+      },
+      "fnsku": {
+        "visibility": "NOT_DETECTED",
+        "legibility": "UNCERTAIN",
+        "valueCompleteness": "UNCERTAIN",
+        "detectedValue": null,
+        "placement": "UNCERTAIN",
+        "placementDescription": null,
+        "evidence": []
+      },
+      "manufacturerBarcode": {
+        "visibility": "NOT_DETECTED",
+        "legibility": "UNCERTAIN",
+        "valueCompleteness": "UNCERTAIN",
+        "detectedValue": null,
+        "evidence": []
+      },
+      "manufacturerBarcodeCoverage": {
+        "status": "UNCERTAIN",
+        "coveringType": null,
+        "evidence": []
+      },
+      "expiryDate": {
+        "visibility": "NOT_DETECTED",
+        "legibility": "UNCERTAIN",
+        "detectedValue": null,
+        "evidence": []
+      },
+      "handlingMarks": [],
+      "otherVisibleIssues": []
+    },
+    "inspectionRecord": {
+      "inspectionId": "INSP-REAL-PACKAGE-001-1790840133587",
+      "unitId": "REAL-PACKAGE-001",
+      "workOrderId": "WO-REAL-PKG-01",
+      "sku": "SKU-CLOTHING-APPAR",
+      "asin": "B0REALPKG01",
+      "imageQuality": {
+        "overall": "GOOD",
+        "issues": []
+      },
+      "checks": [
+        {
+          "checkId": "AMZN-POL-FNSKU-IDENTITY-2026:FNSKU_IDENTITY",
+          "checkType": "FNSKU_IDENTITY",
+          "applicability": "APPLICABLE",
+          "verdict": "UNCERTAIN",
+          "reasonCode": "FEATURE_NOT_DETECTED",
+          "explanation": "FNSKU barcode label was not detected in supplied photographs. This does not confirm physical absence.",
+          "rule": {
+            "ruleId": "AMZN-POL-FNSKU-IDENTITY-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": null
+        },
+        {
+          "checkId": "AMZN-POL-POLYBAG-PRESENCE-2026:POLYBAG_PRESENCE",
+          "checkType": "POLYBAG_PRESENCE",
+          "applicability": "APPLICABLE",
+          "verdict": "PASS",
+          "reasonCode": "REQUIREMENT_SATISFIED",
+          "explanation": "Polybag is visibly detected on the physical unit.",
+          "rule": {
+            "ruleId": "AMZN-POL-POLYBAG-PRESENCE-2026",
+            "version": "2026.1"
+          },
+          "evidence": [
+            {
+              "imageId": "front",
+              "description": "White opaque polybag enclosing the unit with visible seams."
+            }
+          ],
+          "observedValue": "VISIBLE"
+        },
+        {
+          "checkId": "AMZN-POL-POLYBAG-SEAL-2026:POLYBAG_SEAL",
+          "checkType": "POLYBAG_SEAL",
+          "applicability": "APPLICABLE",
+          "verdict": "PASS",
+          "reasonCode": "REQUIREMENT_SATISFIED",
+          "explanation": "Polybag is visibly sealed and closed.",
+          "rule": {
+            "ruleId": "AMZN-POL-POLYBAG-SEAL-2026",
+            "version": "2026.1"
+          },
+          "evidence": [
+            {
+              "imageId": "front",
+              "description": "White opaque polybag enclosing the unit with visible seams."
+            }
+          ],
+          "observedValue": "SEALED"
+        },
+        {
+          "checkId": "AMZN-POL-SUFFOCATION-WARN-2026:SUFFOCATION_WARNING_PRESENCE",
+          "checkType": "SUFFOCATION_WARNING_PRESENCE",
+          "applicability": "APPLICABLE",
+          "verdict": "UNCERTAIN",
+          "reasonCode": "FEATURE_NOT_DETECTED",
+          "explanation": "Suffocation warning was not detected in supplied photographs. This does not confirm physical absence.",
+          "rule": {
+            "ruleId": "AMZN-POL-SUFFOCATION-WARN-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "NOT_DETECTED"
+        },
+        {
+          "checkId": "AMZN-POL-SUFFOCATION-WARN-LEG-2026:SUFFOCATION_WARNING_LEGIBILITY",
+          "checkType": "SUFFOCATION_WARNING_LEGIBILITY",
+          "applicability": "APPLICABLE",
+          "verdict": "UNCERTAIN",
+          "reasonCode": "FEATURE_NOT_DETECTED",
+          "explanation": "Suffocation warning was not detected in supplied photographs; legibility cannot be evaluated.",
+          "rule": {
+            "ruleId": "AMZN-POL-SUFFOCATION-WARN-LEG-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": null
+        },
+        {
+          "checkId": "AMZN-POL-BARCODE-COVERAGE-2026:MANUFACTURER_BARCODE_COVERAGE",
+          "checkType": "MANUFACTURER_BARCODE_COVERAGE",
+          "applicability": "APPLICABLE",
+          "verdict": "UNCERTAIN",
+          "reasonCode": "FEATURE_NOT_DETECTED",
+          "explanation": "Manufacturer barcode was not detected in supplied photographs. Non-detection does not confirm proper coverage or physical compliance.",
+          "rule": {
+            "ruleId": "AMZN-POL-BARCODE-COVERAGE-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "NOT_DETECTED"
+        },
+        {
+          "checkId": "AMZN-POL-EXPIRY-VISIBILITY-2026:EXPIRY_VISIBILITY",
+          "checkType": "EXPIRY_VISIBILITY",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Expiry date labeling is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-EXPIRY-VISIBILITY-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": null
+        },
+        {
+          "checkId": "AMZN-POL-EXPIRY-LEGIBILITY-2026:EXPIRY_LEGIBILITY",
+          "checkType": "EXPIRY_LEGIBILITY",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Expiry date labeling is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-EXPIRY-LEGIBILITY-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "UNCERTAIN"
+        },
+        {
+          "checkId": "AMZN-POL-HANDLING-MARKS-2026:HANDLING_MARKS",
+          "checkType": "HANDLING_MARKS",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "No handling marks are required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-HANDLING-MARKS-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "none_required"
+        },
+        {
+          "checkId": "AMZN-POL-FNSKU-PLACEMENT-2026:FNSKU_PLACEMENT",
+          "checkType": "FNSKU_PLACEMENT",
+          "applicability": "APPLICABLE",
+          "verdict": "UNCERTAIN",
+          "reasonCode": "FEATURE_NOT_DETECTED",
+          "explanation": "FNSKU barcode was not detected in supplied photographs; placement cannot be evaluated.",
+          "rule": {
+            "ruleId": "AMZN-POL-FNSKU-PLACEMENT-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": null
+        }
+      ],
+      "metadata": {
+        "inspectedAt": "2026-10-01T07:35:33.586Z",
+        "visionModel": "gemini-2.5-flash",
+        "visionRequestCount": 1
+      }
+    },
+    "operationalStatus": {
+      "status": "REVIEW_REQUIRED",
+      "passCount": 2,
+      "failCount": 0,
+      "uncertainCount": 5,
+      "notApplicableCount": 3,
+      "blockingCheckTypes": [],
+      "uncertainCheckTypes": [
+        "FNSKU_IDENTITY",
+        "SUFFOCATION_WARNING_PRESENCE",
+        "SUFFOCATION_WARNING_LEGIBILITY",
+        "MANUFACTURER_BARCODE_COVERAGE",
+        "FNSKU_PLACEMENT"
+      ]
+    },
+    "recoveryPlan": {
+      "unitId": "REAL-PACKAGE-001",
+      "requiresEvidence": true,
+      "uncertainCheckCount": 5,
+      "actions": [
+        {
+          "checkType": "FNSKU_IDENTITY",
+          "resolvesCheckTypes": [
+            "FNSKU_IDENTITY",
+            "FNSKU_PLACEMENT"
+          ],
+          "reason": "FEATURE_NOT_DETECTED",
+          "actionType": "CAPTURE_CLOSEUP",
+          "target": "full FNSKU label and surrounding package surface",
+          "instruction": "Capture the entire FNSKU label and surrounding package surface. Avoid glare and keep the barcode, text, and edges clearly readable.",
+          "priority": "HIGH",
+          "suggestedSlot": "label"
+        },
+        {
+          "checkType": "SUFFOCATION_WARNING_PRESENCE",
+          "resolvesCheckTypes": [
+            "SUFFOCATION_WARNING_PRESENCE",
+            "SUFFOCATION_WARNING_LEGIBILITY"
+          ],
+          "reason": "FEATURE_NOT_DETECTED",
+          "actionType": "CAPTURE_CLOSEUP",
+          "target": "suffocation warning text",
+          "instruction": "Capture a sharp, unobstructed close-up of the printed suffocation warning on the polybag.",
+          "priority": "HIGH",
+          "suggestedSlot": "front"
+        },
+        {
+          "checkType": "MANUFACTURER_BARCODE_COVERAGE",
+          "resolvesCheckTypes": [
+            "MANUFACTURER_BARCODE_COVERAGE"
+          ],
+          "reason": "FEATURE_NOT_DETECTED",
+          "actionType": "RECAPTURE_BACK",
+          "target": "manufacturer barcode area",
+          "instruction": "Capture a clear image of the manufacturer barcode area to verify whether the UPC/EAN is completely covered.",
+          "priority": "MEDIUM",
+          "suggestedSlot": "back"
+        }
+      ]
+    },
+    "routingDecision": "RECAPTURE_EVIDENCE"
+  },
+  {
+    "unitId": "REAL-PHONE-001",
+    "workOrder": {
+      "workOrderId": "WO-REAL-PHN-01",
+      "unitId": "REAL-PHONE-001",
+      "sku": "SKU-INFINIX-SMART8",
+      "asin": "B0REALPHN01",
+      "expectedFnsku": "X00REALPHN01",
+      "requirements": {
+        "polybag": "NOT_REQUIRED",
+        "suffocationWarning": "NOT_REQUIRED",
+        "expiryDate": "NOT_REQUIRED",
+        "handlingMarks": {
+          "state": "NOT_REQUIRED",
+          "requiredMarks": []
+        }
+      }
+    },
+    "readiness": {
+      "status": "READY",
+      "slotStatuses": {
+        "front": {
+          "slotId": "front",
+          "status": "READY",
+          "issues": [],
+          "width": 900,
+          "height": 1600,
+          "byteSize": 82484
+        },
+        "back": {
+          "slotId": "back",
+          "status": "READY",
+          "issues": [],
+          "width": 900,
+          "height": 1600,
+          "byteSize": 94662
+        },
+        "label": {
+          "slotId": "label",
+          "status": "READY",
+          "issues": [],
+          "width": 900,
+          "height": 1600,
+          "byteSize": 125688
+        }
+      },
+      "suppliedSlots": [
+        "front",
+        "back",
+        "label"
+      ],
+      "missingSlots": [],
+      "warnings": [],
+      "canInspect": true
+    },
+    "observation": {
+      "unitId": "REAL-PHONE-001",
+      "imageQuality": {
+        "overall": "GOOD",
+        "issues": []
+      },
+      "polybag": {
+        "visibility": "NOT_DETECTED",
+        "sealStatus": "UNCERTAIN",
+        "packagingType": "NONE_DETECTED",
+        "evidence": []
+      },
+      "suffocationWarning": {
+        "visibility": "NOT_DETECTED",
+        "legibility": "UNCERTAIN",
+        "detectedText": null,
+        "evidence": []
+      },
+      "fnsku": {
+        "visibility": "NOT_DETECTED",
+        "legibility": "UNCERTAIN",
+        "valueCompleteness": "UNCERTAIN",
+        "detectedValue": null,
+        "placement": "UNCERTAIN",
+        "placementDescription": null,
+        "evidence": []
+      },
+      "manufacturerBarcode": {
+        "visibility": "NOT_DETECTED",
+        "legibility": "UNCERTAIN",
+        "valueCompleteness": "UNCERTAIN",
+        "detectedValue": null,
+        "evidence": []
+      },
+      "manufacturerBarcodeCoverage": {
+        "status": "UNCERTAIN",
+        "coveringType": null,
+        "evidence": []
+      },
+      "expiryDate": {
+        "visibility": "NOT_DETECTED",
+        "legibility": "UNCERTAIN",
+        "detectedValue": null,
+        "evidence": []
+      },
+      "handlingMarks": [],
+      "otherVisibleIssues": []
+    },
+    "inspectionRecord": {
+      "inspectionId": "INSP-REAL-PHONE-001-1790840136199",
+      "unitId": "REAL-PHONE-001",
+      "workOrderId": "WO-REAL-PHN-01",
+      "sku": "SKU-INFINIX-SMART8",
+      "asin": "B0REALPHN01",
+      "imageQuality": {
+        "overall": "GOOD",
+        "issues": []
+      },
+      "checks": [
+        {
+          "checkId": "AMZN-POL-FNSKU-IDENTITY-2026:FNSKU_IDENTITY",
+          "checkType": "FNSKU_IDENTITY",
+          "applicability": "APPLICABLE",
+          "verdict": "UNCERTAIN",
+          "reasonCode": "FEATURE_NOT_DETECTED",
+          "explanation": "FNSKU barcode label was not detected in supplied photographs. This does not confirm physical absence.",
+          "rule": {
+            "ruleId": "AMZN-POL-FNSKU-IDENTITY-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": null
+        },
+        {
+          "checkId": "AMZN-POL-POLYBAG-PRESENCE-2026:POLYBAG_PRESENCE",
+          "checkType": "POLYBAG_PRESENCE",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Polybag packaging is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-POLYBAG-PRESENCE-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "NOT_DETECTED"
+        },
+        {
+          "checkId": "AMZN-POL-POLYBAG-SEAL-2026:POLYBAG_SEAL",
+          "checkType": "POLYBAG_SEAL",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Polybag packaging is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-POLYBAG-SEAL-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "UNCERTAIN"
+        },
+        {
+          "checkId": "AMZN-POL-SUFFOCATION-WARN-2026:SUFFOCATION_WARNING_PRESENCE",
+          "checkType": "SUFFOCATION_WARNING_PRESENCE",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Suffocation warning is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-SUFFOCATION-WARN-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "NOT_DETECTED"
+        },
+        {
+          "checkId": "AMZN-POL-SUFFOCATION-WARN-LEG-2026:SUFFOCATION_WARNING_LEGIBILITY",
+          "checkType": "SUFFOCATION_WARNING_LEGIBILITY",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Suffocation warning is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-SUFFOCATION-WARN-LEG-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "UNCERTAIN"
+        },
+        {
+          "checkId": "AMZN-POL-BARCODE-COVERAGE-2026:MANUFACTURER_BARCODE_COVERAGE",
+          "checkType": "MANUFACTURER_BARCODE_COVERAGE",
+          "applicability": "APPLICABLE",
+          "verdict": "UNCERTAIN",
+          "reasonCode": "FEATURE_NOT_DETECTED",
+          "explanation": "Manufacturer barcode was not detected in supplied photographs. Non-detection does not confirm proper coverage or physical compliance.",
+          "rule": {
+            "ruleId": "AMZN-POL-BARCODE-COVERAGE-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "NOT_DETECTED"
+        },
+        {
+          "checkId": "AMZN-POL-EXPIRY-VISIBILITY-2026:EXPIRY_VISIBILITY",
+          "checkType": "EXPIRY_VISIBILITY",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Expiry date labeling is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-EXPIRY-VISIBILITY-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": null
+        },
+        {
+          "checkId": "AMZN-POL-EXPIRY-LEGIBILITY-2026:EXPIRY_LEGIBILITY",
+          "checkType": "EXPIRY_LEGIBILITY",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "Expiry date labeling is not required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-EXPIRY-LEGIBILITY-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "UNCERTAIN"
+        },
+        {
+          "checkId": "AMZN-POL-HANDLING-MARKS-2026:HANDLING_MARKS",
+          "checkType": "HANDLING_MARKS",
+          "applicability": "NOT_APPLICABLE",
+          "verdict": null,
+          "reasonCode": "NOT_APPLICABLE",
+          "explanation": "No handling marks are required by this work order.",
+          "rule": {
+            "ruleId": "AMZN-POL-HANDLING-MARKS-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": "none_required"
+        },
+        {
+          "checkId": "AMZN-POL-FNSKU-PLACEMENT-2026:FNSKU_PLACEMENT",
+          "checkType": "FNSKU_PLACEMENT",
+          "applicability": "APPLICABLE",
+          "verdict": "UNCERTAIN",
+          "reasonCode": "FEATURE_NOT_DETECTED",
+          "explanation": "FNSKU barcode was not detected in supplied photographs; placement cannot be evaluated.",
+          "rule": {
+            "ruleId": "AMZN-POL-FNSKU-PLACEMENT-2026",
+            "version": "2026.1"
+          },
+          "evidence": [],
+          "observedValue": null
+        }
+      ],
+      "metadata": {
+        "inspectedAt": "2026-10-01T07:35:36.197Z",
+        "visionModel": "gemini-2.5-flash",
+        "visionRequestCount": 1
+      }
+    },
+    "operationalStatus": {
+      "status": "REVIEW_REQUIRED",
+      "passCount": 0,
+      "failCount": 0,
+      "uncertainCount": 3,
+      "notApplicableCount": 7,
+      "blockingCheckTypes": [],
+      "uncertainCheckTypes": [
+        "FNSKU_IDENTITY",
+        "MANUFACTURER_BARCODE_COVERAGE",
+        "FNSKU_PLACEMENT"
+      ]
+    },
+    "recoveryPlan": {
+      "unitId": "REAL-PHONE-001",
+      "requiresEvidence": true,
+      "uncertainCheckCount": 3,
+      "actions": [
+        {
+          "checkType": "FNSKU_IDENTITY",
+          "resolvesCheckTypes": [
+            "FNSKU_IDENTITY",
+            "FNSKU_PLACEMENT"
+          ],
+          "reason": "FEATURE_NOT_DETECTED",
+          "actionType": "CAPTURE_CLOSEUP",
+          "target": "full FNSKU label and surrounding package surface",
+          "instruction": "Capture the entire FNSKU label and surrounding package surface. Avoid glare and keep the barcode, text, and edges clearly readable.",
+          "priority": "HIGH",
+          "suggestedSlot": "label"
+        },
+        {
+          "checkType": "MANUFACTURER_BARCODE_COVERAGE",
+          "resolvesCheckTypes": [
+            "MANUFACTURER_BARCODE_COVERAGE"
+          ],
+          "reason": "FEATURE_NOT_DETECTED",
+          "actionType": "RECAPTURE_BACK",
+          "target": "manufacturer barcode area",
+          "instruction": "Capture a clear image of the manufacturer barcode area to verify whether the UPC/EAN is completely covered.",
+          "priority": "MEDIUM",
+          "suggestedSlot": "back"
+        }
+      ]
+    },
+    "routingDecision": "RECAPTURE_EVIDENCE"
+  }
+]

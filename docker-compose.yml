@@ -1,0 +1,25 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: prep_manager_db
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-prep_manager}
+      POSTGRES_USER: ${POSTGRES_ADMIN_USER:-prep_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD:-prep_admin_secure_pass_2026}
+      APP_USER: ${POSTGRES_APP_USER:-prep_app}
+      APP_PASSWORD: ${POSTGRES_APP_PASSWORD:-prep_app_secure_pass_2026}
+    ports:
+      - "${POSTGRES_PORT:-5434}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_ADMIN_USER:-prep_admin} -d ${POSTGRES_DB:-prep_manager}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:
+    driver: local
