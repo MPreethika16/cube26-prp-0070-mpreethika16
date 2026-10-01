@@ -38,3 +38,6 @@ Prep Manager provides **mathematically verifiable proof of preparation**:
 - **Deterministic Compliance Benchmark:** 42 / 42 passed (**100% accuracy**).
 - **Safety Incidents / False Passes on Physical Defects:** **0**.
 - **Tenancy Isolation:** Scoped to `org_demo_alpha` and `org_demo_bravo` with cross-tenant access denial.
+
+> **Note on Held-Out Products vs Operator Work Orders:**  
+> PRODUCT-1 through PRODUCT-15 are evaluation-only physical products, not operator work-order Unit IDs. Their 45 original photographs form the frozen held-out vision dataset evaluated against frozen reference visual annotations. For the interactive operator workflow, use the provided Sample A/B/C work orders or another configured work-order unit. Entering PRODUCT-1 through PRODUCT-15 in the operator Unit ID field is therefore expected to return 'work order not found'.
