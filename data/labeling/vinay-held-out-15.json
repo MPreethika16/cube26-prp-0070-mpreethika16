@@ -1,0 +1,205 @@
+{
+  "labeler": "Vinay",
+  "role": "second annotator",
+  "dataset": "held-out PRODUCT-1 through PRODUCT-15",
+  "created": "2026-10-08",
+  "notice": "Second-label sheet. Does not replace or edit held-out-reference-annotations.json. Fields Vinay did not judge are omitted. This file is not an accuracy score.",
+  "omitted_on_purpose": ["polybag_sealed", "suffocation_warning_visible", "photo_quality_sufficient"],
+  "mapping": {
+    "barcode_digits": "manufacturer barcode visible and the value he wrote",
+    "yes_mac_imei": "not a GTIN, so manufacturer barcode YES/NO is left null",
+    "no_barcode": "manufacturer barcode not present",
+    "isbn": "barcode value with symbology ISBN, not an FNSKU",
+    "fnsku_no": "fnsku not visible",
+    "use_by_or_09_2027": "the only explicit consumer expiry reads",
+    "best_before_rule_or_mfd": "not a consumer expiry date",
+    "handling_no": "no handling mark seen",
+    "cool_dry_or_keep_dry": "handling mark seen"
+  },
+  "products": [
+    {
+      "productId": "PRODUCT-1",
+      "name": "Cintu Euro Pop",
+      "raw": { "barcode": "8906071886920", "fnsku": "no", "expiry": "Use by AUG 26", "handling": "cool/dry", "notes": "no back photo" },
+      "judged": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_value": "8906071886920",
+        "fnsku_visible": "NO",
+        "expiry_visible": "YES",
+        "expiry_read": "Use by AUG 26",
+        "handling_mark_visible": "YES"
+      }
+    },
+    {
+      "productId": "PRODUCT-2",
+      "name": "Kangaro staples",
+      "raw": { "barcode": "8901057510028", "fnsku": "no", "expiry": "no", "handling": "no", "notes": "MFD 04/2025 only" },
+      "judged": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_value": "8901057510028",
+        "fnsku_visible": "NO",
+        "expiry_visible": "NO",
+        "handling_mark_visible": "NO"
+      }
+    },
+    {
+      "productId": "PRODUCT-3",
+      "name": "Mysore soap",
+      "raw": { "barcode": "8901287100815", "fnsku": "no", "expiry": "best-before rule only", "handling": "no", "notes": "June 2026 is MFD, not an expiry date" },
+      "judged": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_value": "8901287100815",
+        "fnsku_visible": "NO",
+        "expiry_visible": "NO",
+        "handling_mark_visible": "NO"
+      }
+    },
+    {
+      "productId": "PRODUCT-4",
+      "name": "Airtel 5G CPE",
+      "raw": { "barcode": "yes (MAC/IMEI)", "fnsku": "no", "expiry": "no", "handling": "no", "notes": "mfg September 2025" },
+      "judged": {
+        "manufacturer_barcode_visible": null,
+        "manufacturer_barcode_value": null,
+        "identifier_kind": "mac_imei",
+        "fnsku_visible": "NO",
+        "expiry_visible": "NO",
+        "handling_mark_visible": "NO"
+      }
+    },
+    {
+      "productId": "PRODUCT-5",
+      "name": "Cello hot pot",
+      "raw": { "barcode": "8901372241614", "fnsku": "no", "expiry": "no", "handling": "no", "notes": "packed AUG-2025" },
+      "judged": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_value": "8901372241614",
+        "fnsku_visible": "NO",
+        "expiry_visible": "NO",
+        "handling_mark_visible": "NO"
+      }
+    },
+    {
+      "productId": "PRODUCT-6",
+      "name": "Xstream TV",
+      "raw": { "barcode": "no barcode", "fnsku": "no", "expiry": "no", "handling": "no", "notes": "label text is readable" },
+      "judged": {
+        "manufacturer_barcode_visible": "NO",
+        "manufacturer_barcode_value": null,
+        "fnsku_visible": "NO",
+        "expiry_visible": "NO",
+        "handling_mark_visible": "NO"
+      }
+    },
+    {
+      "productId": "PRODUCT-7",
+      "name": "Oxford mini dictionary",
+      "raw": { "barcode": "9780195692587", "fnsku": "no", "expiry": "no", "handling": "no", "notes": "ISBN" },
+      "judged": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_value": "9780195692587",
+        "barcode_symbology": "ISBN",
+        "fnsku_visible": "NO",
+        "expiry_visible": "NO",
+        "handling_mark_visible": "NO"
+      }
+    },
+    {
+      "productId": "PRODUCT-8",
+      "name": "boAt Airdopes 141",
+      "raw": { "barcode": "8904130887093", "fnsku": "no", "expiry": "no", "handling": "no", "notes": "also 1000000241; mfg Jan 2025" },
+      "judged": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_value": "8904130887093",
+        "fnsku_visible": "NO",
+        "expiry_visible": "NO",
+        "handling_mark_visible": "NO"
+      }
+    },
+    {
+      "productId": "PRODUCT-9",
+      "name": "Fire-Boltt Legend",
+      "raw": { "barcode": "8906119246334", "fnsku": "no", "expiry": "no", "handling": "no", "notes": "mfg March 2024" },
+      "judged": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_value": "8906119246334",
+        "fnsku_visible": "NO",
+        "expiry_visible": "NO",
+        "handling_mark_visible": "NO"
+      }
+    },
+    {
+      "productId": "PRODUCT-10",
+      "name": "Calligraphy set",
+      "raw": { "barcode": "6938750036229", "fnsku": "no", "expiry": "no", "handling": "no", "notes": "window carton, not a polybag" },
+      "judged": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_value": "6938750036229",
+        "fnsku_visible": "NO",
+        "expiry_visible": "NO",
+        "handling_mark_visible": "NO"
+      }
+    },
+    {
+      "productId": "PRODUCT-11",
+      "name": "Camel poster colours",
+      "raw": { "barcode": "8901425000434", "fnsku": "no", "expiry": "no", "handling": "no", "notes": "PKD 08/2019 is a pack date" },
+      "judged": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_value": "8901425000434",
+        "fnsku_visible": "NO",
+        "expiry_visible": "NO",
+        "handling_mark_visible": "NO"
+      }
+    },
+    {
+      "productId": "PRODUCT-12",
+      "name": "Diprobate-G Plus",
+      "raw": { "barcode": "8901296045435", "fnsku": "no", "expiry": "no expiry in these shots", "handling": "keep dry / no freeze", "notes": "no expiry in these shots" },
+      "judged": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_value": "8901296045435",
+        "fnsku_visible": "NO",
+        "expiry_visible": "NO",
+        "handling_mark_visible": "YES"
+      }
+    },
+    {
+      "productId": "PRODUCT-13",
+      "name": "Gabany-M tablets",
+      "raw": { "barcode": "8904250627722", "fnsku": "no", "expiry": "09/2027", "handling": "cool/dry", "notes": "batch GBL501J; MFD 10/2025" },
+      "judged": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_value": "8904250627722",
+        "fnsku_visible": "NO",
+        "expiry_visible": "YES",
+        "expiry_read": "09/2027",
+        "handling_mark_visible": "YES"
+      }
+    },
+    {
+      "productId": "PRODUCT-14",
+      "name": "Magnetic chess",
+      "raw": { "barcode": "8904326203256", "fnsku": "no", "expiry": "no", "handling": "no", "notes": "mfg Jan 2025" },
+      "judged": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_value": "8904326203256",
+        "fnsku_visible": "NO",
+        "expiry_visible": "NO",
+        "handling_mark_visible": "NO"
+      }
+    },
+    {
+      "productId": "PRODUCT-15",
+      "name": "Prestige Nutri-Mix",
+      "raw": { "barcode": "8901365431503", "fnsku": "no", "expiry": "no", "handling": "no", "notes": "mfg January 2025" },
+      "judged": {
+        "manufacturer_barcode_visible": "YES",
+        "manufacturer_barcode_value": "8901365431503",
+        "fnsku_visible": "NO",
+        "expiry_visible": "NO",
+        "handling_mark_visible": "NO"
+      }
+    }
+  ]
+}
