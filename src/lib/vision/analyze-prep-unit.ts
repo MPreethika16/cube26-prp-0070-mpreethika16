@@ -4,6 +4,7 @@ import {
   type PrepUnitObservation,
 } from "./prep-observation.schema";
 import { preprocessImages } from "./image-preprocessor";
+import { applyObservationGuards } from "./observation-guards";
 
 export interface PrepUnitImageInput {
   imageId: string;
@@ -14,6 +15,8 @@ export interface PrepUnitImageInput {
 export interface AnalyzePrepUnitOptions {
   model?: string;
   apiKey?: string;
+  /** claude uses ANTHROPIC_API_KEY. gemini is the original path and is not the Round 3 default. */
+  provider?: "claude" | "gemini";
 }
 
 export interface AnalyzePrepUnitResult {
@@ -38,7 +41,7 @@ export interface AnalyzePrepUnitResult {
   };
 }
 
-const SYSTEM_INSTRUCTION = `You are a visual observation agent for physical product preparation in a fulfillment and prep warehouse.
+export const SYSTEM_INSTRUCTION = `You are a visual observation agent for physical product preparation in a fulfillment and prep warehouse.
 Your role is SOLELY to act as a factual visual observer.
 
 MANDATORY RULES:
@@ -86,6 +89,11 @@ MANDATORY RULES:
 - Evidence must reference one of the supplied imageIds.
 - Evidence descriptions must be short and factual.
 - Do not claim properties that cannot be visually established.
+- FALSE VISIBLE GUARD: Mark expiryDate.visibility VISIBLE only when a date that is clearly an expiry, best-by, or use-by is readable or partly readable. MFD, MFG, PKD, packed, and a manufacturing month are not expiry. A best-before rule counted from a manufacture date is not a consumer expiry date. If unsure, use NOT_DETECTED or UNCERTAIN, never VISIBLE.
+- FALSE VISIBLE GUARD: Mark polybag.visibility VISIBLE only when a bag, sleeve, or plastic overwrap is itself in frame. A window carton, blister window, gloss, or glare is not a polybag. If unsure, use NOT_DETECTED or UNCERTAIN.
+- An ISBN, including a 978 or 979 number, is a book barcode. It is never an FNSKU. Do not put it in fnsku.detectedValue.
+- Do not cite a back label, back panel, or rear view unless a back image was supplied. A missing back photo is not a back-label read.
+- Mark handling marks VISIBLE only when the mark or its words are actually in frame.
 
 You will receive multiple images belonging to a single unit, each tagged with its imageId.
 Extract unit visual observations adhering strictly to the JSON schema.
@@ -167,6 +175,21 @@ export async function analyzePrepUnit(
   options?: AnalyzePrepUnitOptions
 ): Promise<AnalyzePrepUnitResult> {
   const totalStartTime = Date.now();
+  const provider =
+    options?.provider ||
+    (process.env.PREP_VISION_PROVIDER === "gemini" || process.env.PREP_VISION_PROVIDER === "claude"
+      ? process.env.PREP_VISION_PROVIDER
+      : process.env.ANTHROPIC_API_KEY
+        ? "claude"
+        : "gemini");
+
+  if (provider === "claude") {
+    const { analyzePrepUnitWithClaude } = await import("./claude-observer");
+    return analyzePrepUnitWithClaude(unitId, images, {
+      model: options?.model,
+      apiKey: options?.apiKey,
+    });
+  }
 
   if (!images || images.length === 0) {
     throw new Error(
@@ -233,6 +256,7 @@ Remember:
 - Evidence must reference one of the supplied imageIds (${images.map((i) => `"${i.imageId}"`).join(", ")}).
 - Evidence descriptions must be short and factual.
 - Do not claim properties that cannot be visually established.
+- Do not mark expiry or a polybag VISIBLE unless that feature itself is clearly in frame. Gloss and lot codes are not enough.
 
 Respond with pure JSON only.`;
 
@@ -367,7 +391,10 @@ Respond with pure JSON only.`;
   }
 
   return {
-    observation: parseResult.data,
+    observation: applyObservationGuards(
+      parseResult.data,
+      images.map((image) => image.imageId)
+    ),
     metadata: {
       model,
       durationMs: totalVisionMs,
