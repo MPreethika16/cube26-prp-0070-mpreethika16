@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json(unparsedBodyOutput(), { status: 200 });
+    return NextResponse.json(unparsedBodyOutput(), { status: 422 });
   }
   try {
     const result = await handlePrepRound3(body);

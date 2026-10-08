@@ -13,6 +13,20 @@ function blob(value: string | null | undefined, evidence: VisualEvidence[]): str
   return [value || "", ...evidence.map((row) => row.description)].join(" \n ");
 }
 
+/** GS1 check digit for GTIN-8/12/13/14. Null when the string is not a GTIN. */
+export function gtinCheckDigitOk(value: string): boolean | null {
+  const digits = value.replace(/[\s-]/g, "");
+  if (!/^\d{8}$|^\d{12}$|^\d{13}$|^\d{14}$/.test(digits)) return null;
+  const body = digits.slice(0, -1);
+  let sum = 0;
+  for (let i = 0; i < body.length; i += 1) {
+    const weight = (body.length - i) % 2 === 0 ? 1 : 3;
+    sum += Number(body[i]) * weight;
+  }
+  const expected = (10 - (sum % 10)) % 10;
+  return expected === Number(digits[digits.length - 1]);
+}
+
 function isConsumerExpiry(text: string): boolean {
   if (RELATIVE_BEST_BEFORE.test(text) && MANUFACTURE_OR_PACK.test(text) && !/\b(use[\s-]*by|expir)/i.test(text)) {
     return false;
@@ -103,6 +117,19 @@ export function applyObservationGuards(observation: PrepUnitObservation, imageId
   }
 
   next.manufacturerBarcode.evidence = keepEvidence(next.manufacturerBarcode.evidence, supplied, allowBackClaims);
+  const barcodeDigits = next.manufacturerBarcode.detectedValue;
+  if (
+    next.manufacturerBarcode.visibility === "VISIBLE"
+    && barcodeDigits
+    && gtinCheckDigitOk(barcodeDigits) === false
+  ) {
+    next.manufacturerBarcode = {
+      ...next.manufacturerBarcode,
+      visibility: "UNCERTAIN",
+      legibility: "UNCERTAIN",
+      detectedValue: null,
+    };
+  }
   if (next.manufacturerBarcode.visibility === "VISIBLE" && next.manufacturerBarcode.evidence.length === 0) {
     next.manufacturerBarcode = {
       ...next.manufacturerBarcode,

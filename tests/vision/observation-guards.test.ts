@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { applyObservationGuards } from "../../src/lib/vision/observation-guards";
+import { applyObservationGuards, gtinCheckDigitOk } from "../../src/lib/vision/observation-guards";
 import type { PrepUnitObservation } from "../../src/lib/vision/prep-observation.schema";
 
 function blank(): PrepUnitObservation {
@@ -27,6 +27,29 @@ function blank(): PrepUnitObservation {
 const front = [{ imageId: "front.jpeg", description: "front panel" }];
 
 describe("observation guards", () => {
+  it("drops a barcode whose check digit is impossible and keeps a valid GTIN", () => {
+    assert.equal(gtinCheckDigitOk("8904250627722"), true);
+    assert.equal(gtinCheckDigitOk("8904425062772"), false);
+    const bad = blank();
+    bad.manufacturerBarcode = {
+      visibility: "VISIBLE",
+      legibility: "LEGIBLE",
+      detectedValue: "8904425062772",
+      evidence: [{ imageId: "front.jpeg", description: "barcode digits" }],
+    };
+    const guarded = applyObservationGuards(bad, ["front.jpeg"]);
+    assert.equal(guarded.manufacturerBarcode.visibility, "UNCERTAIN");
+    assert.equal(guarded.manufacturerBarcode.detectedValue, null);
+    const good = blank();
+    good.manufacturerBarcode = {
+      visibility: "VISIBLE",
+      legibility: "LEGIBLE",
+      detectedValue: "8904250627722",
+      evidence: front,
+    };
+    assert.equal(applyObservationGuards(good, ["front.jpeg"]).manufacturerBarcode.detectedValue, "8904250627722");
+  });
+
   it("drops manufacture and pack dates that were marked as expiry", () => {
     for (const detectedValue of ["MFD 04/2025", "PKD 08/2019", "packed AUG-2025", "mfg September 2025"]) {
       const observation = blank();

@@ -71,10 +71,10 @@ export function unparsedBodyOutput(): AgentOutput {
 export async function handlePrepRound3(raw: unknown): Promise<Round3HandlerResult> {
   const input = coerceRound3Input(raw);
   if (!hasRequiredIds(raw)) {
-    return await done(200, pending(input, "request_id, workflow_id, subject.org_id, and subject.subject_id are required", false));
+    return await done(422, pending(input, "request_id, workflow_id, subject.org_id, and subject.subject_id are required", false));
   }
   if (input.stage && input.stage !== "prep") {
-    return await done(200, pending(input, "stage must be prep", false));
+    return await done(422, pending(input, "stage must be prep", false));
   }
   if (!DEMO_ORGS.has(input.subject.org_id) || !isValidOrgId(input.subject.org_id)) {
     return await done(404, pending(input, "unknown tenant", false));

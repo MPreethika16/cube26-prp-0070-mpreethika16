@@ -82,7 +82,7 @@ describe("Prep Round 3 failure modes", () => {
   it("returns a pending envelope for an unparsed body, the wrong stage, and an unknown org", async () => {
     assertPendingEnvelope(unparsedBodyOutput());
     const stage = await handlePrepRound3(input("stage-unit", { stage: "pack" }));
-    assert.equal(stage.httpStatus, 200);
+    assert.equal(stage.httpStatus, 422);
     assert.match(assertPendingEnvelope(stage.output).error!.message, /stage must be prep/);
     const org = await handlePrepRound3(input("org-unit", { subject: { org_id: "org_other", subject_id: "org-unit" } }));
     assert.equal(org.httpStatus, 404);
