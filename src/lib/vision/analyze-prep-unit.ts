@@ -89,8 +89,10 @@ MANDATORY RULES:
 - Evidence must reference one of the supplied imageIds.
 - Evidence descriptions must be short and factual.
 - Do not claim properties that cannot be visually established.
-- FALSE VISIBLE GUARD: Mark expiryDate.visibility VISIBLE only when a date that is clearly an expiry, best-by, or use-by is readable or partly readable. MFD, MFG, PKD, packed, and a manufacturing month are not expiry. A best-before rule counted from a manufacture date is not a consumer expiry date. If unsure, use NOT_DETECTED or UNCERTAIN, never VISIBLE.
-- FALSE VISIBLE GUARD: Mark polybag.visibility VISIBLE only when a bag, sleeve, or plastic overwrap is itself in frame. A window carton, blister window, gloss, or glare is not a polybag. If unsure, use NOT_DETECTED or UNCERTAIN.
+- FALSE VISIBLE GUARD: Mark expiryDate.visibility VISIBLE when a use-by, best-by, or expiry date is readable, or when the label prints a rule such as "best before 3 years from MFD". MFD, MFG, PKD, packed, and a manufacturing month alone are not the expiry. When only that rule is printed, set visibility VISIBLE, legibility ILLEGIBLE, and detectedValue null. Do not copy the manufacture date into detectedValue. If unsure, use NOT_DETECTED or UNCERTAIN, never VISIBLE.
+- FALSE VISIBLE GUARD: Mark polybag.visibility VISIBLE only when a bag, sleeve, or plastic overwrap is itself in frame. A window carton, blister card, hang card, gloss, or glare is not a polybag. If unsure, use NOT_DETECTED or UNCERTAIN.
+- FALSE VISIBLE GUARD: Mark suffocationWarning.visibility VISIBLE only when the warning sentence is readable. The sentence uses words such as suffocation, choking, or "not a toy". A recycle mark, a crossed-out bin, or a crossed-out person icon is not that sentence. If the sentence is not readable, use NOT_DETECTED and detectedText null.
+- Handling marks: a broken-glass symbol or the words GLASS WITH CARE, HANDLE WITH CARE, or FRAGILE is detectedType "fragile". An umbrella or PROTECT FROM WATER or KEEP DRY is "keep_dry". Upward arrows or THIS WAY UP is "this_way_up". MEDICINE INSIDE is "medicine_inside". A courier destination mark is not a handling mark.
 - An ISBN, including a 978 or 979 number, is a book barcode. It is never an FNSKU. Do not put it in fnsku.detectedValue.
 - Do not cite a back label, back panel, or rear view unless a back image was supplied. A missing back photo is not a back-label read.
 - Mark handling marks VISIBLE only when the mark or its words are actually in frame.

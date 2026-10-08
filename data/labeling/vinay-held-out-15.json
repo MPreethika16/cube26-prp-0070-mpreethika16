@@ -27,7 +27,7 @@
         "fnsku_visible": "NO",
         "expiry_visible": "YES",
         "expiry_read": "Use by AUG 26",
-        "handling_mark_visible": "YES"
+        "handling_mark_visible": "NO"
       }
     },
     {
@@ -45,12 +45,14 @@
     {
       "productId": "PRODUCT-3",
       "name": "Mysore soap",
-      "raw": { "barcode": "8901287100815", "fnsku": "no", "expiry": "best-before rule only", "handling": "no", "notes": "June 2026 is MFD, not an expiry date" },
+      "raw": { "barcode": "8901287100815", "fnsku": "no", "expiry": "best before 3 years from MFD", "handling": "no", "notes": "June 2026 is MFD only. # = MFD on label.jpeg. The customer expiry is the printed rule, not June 2026." },
       "judged": {
         "manufacturer_barcode_visible": "YES",
         "manufacturer_barcode_value": "8901287100815",
         "fnsku_visible": "NO",
-        "expiry_visible": "NO",
+        "expiry_visible": "YES",
+        "expiry_readable": "NO",
+        "expiry_read": null,
         "handling_mark_visible": "NO"
       }
     },
@@ -161,7 +163,7 @@
         "manufacturer_barcode_value": "8901296045435",
         "fnsku_visible": "NO",
         "expiry_visible": "NO",
-        "handling_mark_visible": "YES"
+        "handling_mark_visible": "NO"
       }
     },
     {
@@ -174,7 +176,7 @@
         "fnsku_visible": "NO",
         "expiry_visible": "YES",
         "expiry_read": "09/2027",
-        "handling_mark_visible": "YES"
+        "handling_mark_visible": "NO"
       }
     },
     {

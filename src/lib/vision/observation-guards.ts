@@ -3,8 +3,21 @@ import type { PrepUnitObservation, VisualEvidence } from "./prep-observation.sch
 const EXPIRY_CUE = /\b(expir\w*|use[\s-]*by|best[\s-]*before|best[\s-]*by)\b/i;
 const RELATIVE_BEST_BEFORE = /best[\s-]*before\s+\d+\s*(year|month)/i;
 const MANUFACTURE_OR_PACK = /\b(mfd|mfg|manufactur\w*|pkd|packed|pack(?:ing)?\s*date|date\s+of\s+manufacture)\b/i;
-const WINDOW_CARTON = /window\s*carton|display\s*window|blister(?:\s+display)?\s*window|carton\s*window/i;
+const NOT_A_BAG = /window\s*carton|display\s*window|blister(?:\s+(?:display|card|pack|window))?|carton\s*window|hang[\s-]*card/i;
 const REAL_BAG = /poly\s*bag|polybag|plastic\s*bag|\bsleeve\b|overwrap|shrink[\s-]*wrap/i;
+const SUFFOCATION_SENTENCE = /suffocat|chok(?:e|ing)|not a toy|keep away from (?:babies|children|kids)/i;
+/** Ruthvik's outsource stand-in: a red handle-with-care / glass-with-care label, when the word "suffocation" is not printed. */
+const CARE_LABEL = /handle\s*with\s*care|glass\s*with\s*care/i;
+
+/** Sticker words seen on the hub cartons and retail boxes, mapped to the mark the rule compares. */
+export function canonicalHandlingType(text: string | null | undefined): string | null {
+  const value = text || "";
+  if (/glass\s*with\s*care|handle\s*with\s*care|fragile|broken\s*glass/i.test(value)) return "fragile";
+  if (/protect\s*from\s*water|keep\s*dry|umbrella/i.test(value)) return "keep_dry";
+  if (/this\s*way\s*up|this\s*side\s*up|arrows?\s*up/i.test(value)) return "this_way_up";
+  if (/medicine\s*inside/i.test(value)) return "medicine_inside";
+  return null;
+}
 const ISBN_VALUE = /\bisbn\b|(?:^|[^0-9])97[89]\d{10}(?:[^0-9]|$)/i;
 const BACK_CLAIM = /\b(back|rear)\s+(label|panel|side|photo|view)\b/i;
 const BACK_IMAGE = /(^|[^a-z0-9])(back|rear)([^a-z0-9]|$)/i;
@@ -27,12 +40,17 @@ export function gtinCheckDigitOk(value: string): boolean | null {
   return expected === Number(digits[digits.length - 1]);
 }
 
+const STORAGE_LINE = /store\s+in|cool,?\s*dry|hygienic|not above\s+\d|do not freeze|protect from light|dark place/i;
+const SHIPPING_MARK = /glass\s*with\s*care|handle\s*with\s*care|fragile|broken\s*glass|this\s*way\s*up|this\s*side\s*up|keep\s*dry|protect\s*from\s*water|umbrella|arrows?\s*up/i;
+
 function isConsumerExpiry(text: string): boolean {
-  if (RELATIVE_BEST_BEFORE.test(text) && MANUFACTURE_OR_PACK.test(text) && !/\b(use[\s-]*by|expir)/i.test(text)) {
-    return false;
-  }
   if (MANUFACTURE_OR_PACK.test(text) && !EXPIRY_CUE.test(text)) return false;
   return true;
+}
+
+/** A printed "best before N years from MFD" rule is visible. The manufacture date on that line is not the expiry. */
+function isRelativeBestBefore(text: string): boolean {
+  return RELATIVE_BEST_BEFORE.test(text);
 }
 
 function suppliedSet(imageIds: string[]): Set<string> {
@@ -73,7 +91,14 @@ export function applyObservationGuards(observation: PrepUnitObservation, imageId
   if (next.expiryDate.visibility === "VISIBLE") {
     const text = blob(next.expiryDate.detectedValue, next.expiryDate.evidence);
     const unsupported = !isConsumerExpiry(text) || next.expiryDate.evidence.length === 0;
-    if (unsupported) {
+    if (isRelativeBestBefore(text)) {
+      next.expiryDate = {
+        ...next.expiryDate,
+        visibility: "VISIBLE",
+        legibility: "ILLEGIBLE",
+        detectedValue: null,
+      };
+    } else if (unsupported) {
       next.expiryDate = {
         ...next.expiryDate,
         visibility: "NOT_DETECTED",
@@ -87,7 +112,7 @@ export function applyObservationGuards(observation: PrepUnitObservation, imageId
   next.polybag.evidence = keepEvidence(next.polybag.evidence, supplied, allowBackClaims);
   if (next.polybag.visibility === "VISIBLE") {
     const text = blob(null, next.polybag.evidence);
-    const windowOnly = WINDOW_CARTON.test(text) && !REAL_BAG.test(text);
+    const windowOnly = NOT_A_BAG.test(text) && !REAL_BAG.test(text);
     if (windowOnly || next.polybag.evidence.length === 0) {
       next.polybag = {
         visibility: "NOT_DETECTED",
@@ -145,11 +170,22 @@ export function applyObservationGuards(observation: PrepUnitObservation, imageId
     if (mark.visibility === "VISIBLE" && evidence.length === 0) {
       return { ...mark, visibility: "NOT_DETECTED" as const, legibility: "UNCERTAIN" as const, detectedText: null, evidence: [] };
     }
-    return { ...mark, evidence };
+    const text = blob(mark.detectedText, evidence) + " " + (mark.detectedType || "");
+    if (STORAGE_LINE.test(text) && !SHIPPING_MARK.test(text)) {
+      return { ...mark, visibility: "NOT_DETECTED" as const, legibility: "UNCERTAIN" as const, detectedText: null, detectedType: mark.detectedType, evidence };
+    }
+    const canonical = canonicalHandlingType(text);
+    return { ...mark, evidence, detectedType: canonical || mark.detectedType };
   });
 
   next.suffocationWarning.evidence = keepEvidence(next.suffocationWarning.evidence, supplied, allowBackClaims);
-  if (next.suffocationWarning.visibility === "VISIBLE" && next.suffocationWarning.evidence.length === 0) {
+  const warningText = blob(next.suffocationWarning.detectedText, next.suffocationWarning.evidence);
+  const warningSentence = SUFFOCATION_SENTENCE.test(warningText);
+  const warningCare = CARE_LABEL.test(warningText);
+  if (
+    next.suffocationWarning.visibility === "VISIBLE"
+    && (next.suffocationWarning.evidence.length === 0 || (!warningSentence && !warningCare))
+  ) {
     next.suffocationWarning = {
       ...next.suffocationWarning,
       visibility: "NOT_DETECTED",
@@ -157,6 +193,25 @@ export function applyObservationGuards(observation: PrepUnitObservation, imageId
       detectedText: null,
       evidence: [],
     };
+  } else if (next.suffocationWarning.visibility === "VISIBLE" && warningCare && !warningSentence) {
+    const phrase = warningText.match(CARE_LABEL)?.[0] ?? "handle with care";
+    next.suffocationWarning = { ...next.suffocationWarning, detectedText: phrase };
+  }
+
+  if (next.suffocationWarning.visibility !== "VISIBLE") {
+    const mark = next.handlingMarks.find((row) => {
+      if (row.visibility !== "VISIBLE") return false;
+      return CARE_LABEL.test(blob(row.detectedText, row.evidence));
+    });
+    if (mark) {
+      const phrase = blob(mark.detectedText, mark.evidence).match(CARE_LABEL)?.[0] ?? "handle with care";
+      next.suffocationWarning = {
+        visibility: "VISIBLE",
+        legibility: mark.legibility === "LEGIBLE" ? "LEGIBLE" : "UNCERTAIN",
+        detectedText: phrase,
+        evidence: mark.evidence,
+      };
+    }
   }
 
   return next;

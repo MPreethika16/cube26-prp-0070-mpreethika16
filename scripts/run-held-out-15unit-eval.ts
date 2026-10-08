@@ -640,12 +640,13 @@ async function main() {
     productRecords,
   };
 
+  const outName = process.env.PREP_EVAL_OUT || 'held-out-15unit-eval-results.json';
   fs.writeFileSync(
-    path.join(process.cwd(), 'held-out-15unit-eval-results.json'),
+    path.join(process.cwd(), outName),
     JSON.stringify(finalReport, null, 2),
     'utf-8'
   );
-  console.log('\nSaved full report to held-out-15unit-eval-results.json');
+  console.log(`\nSaved full report to ${outName}`);
 }
 
 main().catch((err) => {

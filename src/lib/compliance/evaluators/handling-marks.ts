@@ -2,6 +2,7 @@ import type {
   HandlingMarkObservation,
   VisualEvidence,
 } from "../../vision/prep-observation.schema";
+import { canonicalHandlingType } from "../../vision/observation-guards";
 import type { AuthoritativePrepRule } from "../authoritative-rule.schema";
 import type { WorkOrderSpecification } from "../work-order.schema";
 import {
@@ -124,12 +125,14 @@ export function evaluateHandlingMarks(
 
   for (const reqMark of requiredMarks) {
     const normalizedReq = reqMark.trim().toLowerCase();
-    const matchingObs = handlingMarksObservations.find(
-      (obs) =>
-        obs.detectedType.trim().toLowerCase() === normalizedReq &&
-        obs.visibility === "VISIBLE" &&
-        obs.legibility !== "ILLEGIBLE"
-    );
+    const matchingObs = handlingMarksObservations.find((obs) => {
+      if (obs.visibility !== "VISIBLE" || obs.legibility === "ILLEGIBLE") return false;
+      const observed = obs.detectedType.trim().toLowerCase();
+      if (observed === normalizedReq) return true;
+      const fromSticker = canonicalHandlingType(`${obs.detectedText || ""} ${obs.detectedType || ""}`);
+      const required = canonicalHandlingType(reqMark) || normalizedReq;
+      return fromSticker !== null && fromSticker === required;
+    });
 
     if (matchingObs) {
       verifiedMarks.push(reqMark);

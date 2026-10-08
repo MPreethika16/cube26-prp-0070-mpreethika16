@@ -1,0 +1,2519 @@
+{
+  "metadata": {
+    "title": "Held-Out Real-World Vision Evaluation (PRODUCT-1 .. PRODUCT-15)",
+    "evaluationTimestamp": "2026-10-08T10:27:38.682Z",
+    "frozenAnnotationHash": "9125043b681113a5dc976e2d2b09ec544c74cb8e428cc637d22f26093ec96215",
+    "totalProducts": 15,
+    "totalWallClockTimeMs": 201555
+  },
+  "metrics": {
+    "totalScorable": 122,
+    "totalAgreements": 104,
+    "totalDisagreements": 7,
+    "totalModelUncertain": 11,
+    "totalNotScorable": 43,
+    "agreementRate": "85.2%",
+    "safetyIncidentsCount": 0,
+    "perFieldMetrics": {
+      "manufacturer_barcode_visible": {
+        "scorable": 15,
+        "agreements": 10,
+        "disagreements": 0,
+        "uncertain": 5,
+        "notScorable": 0
+      },
+      "manufacturer_barcode_readable": {
+        "scorable": 14,
+        "agreements": 7,
+        "disagreements": 2,
+        "uncertain": 5,
+        "notScorable": 1
+      },
+      "fnsku_visible": {
+        "scorable": 15,
+        "agreements": 15,
+        "disagreements": 0,
+        "uncertain": 0,
+        "notScorable": 0
+      },
+      "fnsku_value": {
+        "scorable": 15,
+        "agreements": 15,
+        "disagreements": 0,
+        "uncertain": 0,
+        "notScorable": 0
+      },
+      "polybag_present": {
+        "scorable": 15,
+        "agreements": 15,
+        "disagreements": 0,
+        "uncertain": 0,
+        "notScorable": 0
+      },
+      "polybag_sealed": {
+        "scorable": 0,
+        "agreements": 0,
+        "disagreements": 0,
+        "uncertain": 0,
+        "notScorable": 15
+      },
+      "suffocation_warning_visible": {
+        "scorable": 0,
+        "agreements": 0,
+        "disagreements": 0,
+        "uncertain": 0,
+        "notScorable": 15
+      },
+      "expiry_visible": {
+        "scorable": 15,
+        "agreements": 14,
+        "disagreements": 1,
+        "uncertain": 0,
+        "notScorable": 0
+      },
+      "expiry_readable": {
+        "scorable": 3,
+        "agreements": 2,
+        "disagreements": 0,
+        "uncertain": 1,
+        "notScorable": 12
+      },
+      "handling_mark_visible": {
+        "scorable": 15,
+        "agreements": 14,
+        "disagreements": 1,
+        "uncertain": 0,
+        "notScorable": 0
+      },
+      "photo_quality_sufficient": {
+        "scorable": 15,
+        "agreements": 12,
+        "disagreements": 3,
+        "uncertain": 0,
+        "notScorable": 0
+      }
+    }
+  },
+  "allSafetyIncidents": [],
+  "failureList": [
+    {
+      "productId": "PRODUCT-3",
+      "field": "expiry_visible",
+      "referenceVal": "YES",
+      "modelVal": "NOT_DETECTED",
+      "status": "DISAGREEMENT",
+      "failureType": "VISION_FALSE_NEGATIVE",
+      "likelyCause": "Model reported NOT_DETECTED while visual inspection shows YES",
+      "evidenceImage": "unspecified"
+    },
+    {
+      "productId": "PRODUCT-5",
+      "field": "manufacturer_barcode_readable",
+      "referenceVal": "YES",
+      "modelVal": "ILLEGIBLE",
+      "status": "DISAGREEMENT",
+      "failureType": "READABILITY_ERROR",
+      "likelyCause": "Reference: YES, Model: ILLEGIBLE"
+    },
+    {
+      "productId": "PRODUCT-5",
+      "field": "photo_quality_sufficient",
+      "referenceVal": "YES",
+      "modelVal": "DEGRADED",
+      "status": "DISAGREEMENT",
+      "failureType": "IMAGE_QUALITY_LIMITATION",
+      "likelyCause": "Model evaluated quality as DEGRADED"
+    },
+    {
+      "productId": "PRODUCT-7",
+      "field": "photo_quality_sufficient",
+      "referenceVal": "YES",
+      "modelVal": "DEGRADED",
+      "status": "DISAGREEMENT",
+      "failureType": "IMAGE_QUALITY_LIMITATION",
+      "likelyCause": "Model evaluated quality as DEGRADED"
+    },
+    {
+      "productId": "PRODUCT-12",
+      "field": "manufacturer_barcode_readable",
+      "referenceVal": "YES",
+      "modelVal": "ILLEGIBLE",
+      "status": "DISAGREEMENT",
+      "failureType": "READABILITY_ERROR",
+      "likelyCause": "Reference: YES, Model: ILLEGIBLE"
+    },
+    {
+      "productId": "PRODUCT-12",
+      "field": "photo_quality_sufficient",
+      "referenceVal": "YES",
+      "modelVal": "DEGRADED",
+      "status": "DISAGREEMENT",
+      "failureType": "IMAGE_QUALITY_LIMITATION",
+      "likelyCause": "Model evaluated quality as DEGRADED"
+    },
+    {
+      "productId": "PRODUCT-15",
+      "field": "handling_mark_visible",
+      "referenceVal": "YES",
+      "modelVal": "NOT_DETECTED",
+      "status": "DISAGREEMENT",
+      "failureType": "VISION_FALSE_NEGATIVE",
+      "likelyCause": "Model reported NOT_DETECTED while visual inspection shows YES",
+      "evidenceImage": "back"
+    }
+  ],
+  "productRecords": [
+    {
+      "productId": "PRODUCT-1",
+      "success": true,
+      "latencyMs": 13227,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-1",
+        "imageQuality": {
+          "overall": "GOOD",
+          "issues": []
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "UNCERTAIN",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "COMPLETE",
+          "detectedValue": null,
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "Vertical barcode with number 8906071188609 visible at top-right corner of back label"
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "Manufacturer barcode 8906071188609 is exposed and uncovered on back label"
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "VISIBLE",
+          "legibility": "LEGIBLE",
+          "detectedValue": "AUG 26",
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Use By: AUG 26 printed on lower portion of back label"
+            },
+            {
+              "imageId": "label",
+              "description": "Use By: AUG 26 visible in close-up of back label"
+            }
+          ]
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": []
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-1",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "UNCERTAIN",
+          "status": "MODEL_UNCERTAIN",
+          "failureType": "UNCERTAINTY_ABSTENTION",
+          "likelyCause": "Model expressed uncertainty based on visual ambiguity",
+          "evidenceImage": "label"
+        },
+        {
+          "productId": "PRODUCT-1",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "UNCERTAIN",
+          "status": "MODEL_UNCERTAIN",
+          "failureType": "UNCERTAINTY_ABSTENTION",
+          "likelyCause": "Model uncertain about barcode legibility"
+        },
+        {
+          "productId": "PRODUCT-1",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-1",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-1",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-1",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-1",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-1",
+          "field": "expiry_visible",
+          "referenceVal": "YES",
+          "modelVal": "VISIBLE",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-1",
+          "field": "expiry_readable",
+          "referenceVal": "YES",
+          "modelVal": "LEGIBLE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-1",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-1",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "GOOD",
+          "status": "AGREEMENT"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-2",
+      "success": true,
+      "latencyMs": 11089,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-2",
+        "imageQuality": {
+          "overall": "GOOD",
+          "issues": []
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "VISIBLE",
+          "legibility": "LEGIBLE",
+          "valueCompleteness": "COMPLETE",
+          "detectedValue": "8901057510028",
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Barcode printed on back panel showing number 8901057510028"
+            },
+            {
+              "imageId": "label",
+              "description": "Close-up view of barcode with number 8901057510028 fully visible"
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Manufacturer barcode is visible and exposed on back panel"
+            },
+            {
+              "imageId": "label",
+              "description": "Manufacturer barcode is uncovered and fully readable"
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": []
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-2",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "VISIBLE",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-2",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "LEGIBLE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-2",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-2",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-2",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-2",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-2",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-2",
+          "field": "expiry_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-2",
+          "field": "expiry_readable",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-2",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-2",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "GOOD",
+          "status": "AGREEMENT"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-3",
+      "success": true,
+      "latencyMs": 10267,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-3",
+        "imageQuality": {
+          "overall": "GOOD",
+          "issues": []
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "VISIBLE",
+          "legibility": "LEGIBLE",
+          "valueCompleteness": "COMPLETE",
+          "detectedValue": "8901128710081",
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "Retail barcode visible on product label with value 8901128710081"
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "Manufacturer barcode is exposed and uncovered"
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": []
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-3",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "VISIBLE",
+          "status": "AGREEMENT",
+          "evidenceImage": "label"
+        },
+        {
+          "productId": "PRODUCT-3",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "LEGIBLE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-3",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-3",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-3",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-3",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-3",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-3",
+          "field": "expiry_visible",
+          "referenceVal": "YES",
+          "modelVal": "NOT_DETECTED",
+          "status": "DISAGREEMENT",
+          "failureType": "VISION_FALSE_NEGATIVE",
+          "likelyCause": "Model reported NOT_DETECTED while visual inspection shows YES",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-3",
+          "field": "expiry_readable",
+          "referenceVal": "YES",
+          "modelVal": "UNCERTAIN",
+          "status": "MODEL_UNCERTAIN",
+          "failureType": "UNCERTAINTY_ABSTENTION"
+        },
+        {
+          "productId": "PRODUCT-3",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-3",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "GOOD",
+          "status": "AGREEMENT"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-4",
+      "success": true,
+      "latencyMs": 11953,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-4",
+        "imageQuality": {
+          "overall": "GOOD",
+          "issues": []
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "VISIBLE",
+          "legibility": "LEGIBLE",
+          "valueCompleteness": "COMPLETE",
+          "detectedValue": "BTWXC_4D55J8GFLDJF5",
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "Barcode labeled BTWXC_4D55J8GFLDJF5 visible on white label on box surface."
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "Barcode BTWXC_4D55J8GFLDJF5 is exposed and not covered."
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": []
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-4",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "VISIBLE",
+          "status": "AGREEMENT",
+          "evidenceImage": "label"
+        },
+        {
+          "productId": "PRODUCT-4",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "LEGIBLE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-4",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-4",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-4",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-4",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-4",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-4",
+          "field": "expiry_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-4",
+          "field": "expiry_readable",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-4",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-4",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "GOOD",
+          "status": "AGREEMENT"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-5",
+      "success": true,
+      "latencyMs": 11563,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-5",
+        "imageQuality": {
+          "overall": "DEGRADED",
+          "issues": [
+            "Label image (label) has poor focus and low resolution, making small barcode details and text difficult to inspect reliably"
+          ]
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "VISIBLE",
+          "legibility": "ILLEGIBLE",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "A barcode is visible on the label; however, due to image blur and resolution, the numeric value beneath the barcode is not reliably readable"
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "Barcode visible and exposed on the label without any covering"
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": []
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-5",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "VISIBLE",
+          "status": "AGREEMENT",
+          "evidenceImage": "label"
+        },
+        {
+          "productId": "PRODUCT-5",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "ILLEGIBLE",
+          "status": "DISAGREEMENT",
+          "failureType": "READABILITY_ERROR",
+          "likelyCause": "Reference: YES, Model: ILLEGIBLE"
+        },
+        {
+          "productId": "PRODUCT-5",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-5",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-5",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-5",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-5",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-5",
+          "field": "expiry_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-5",
+          "field": "expiry_readable",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-5",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-5",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "DEGRADED",
+          "status": "DISAGREEMENT",
+          "failureType": "IMAGE_QUALITY_LIMITATION",
+          "likelyCause": "Model evaluated quality as DEGRADED"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-6",
+      "success": true,
+      "latencyMs": 7236,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-6",
+        "imageQuality": {
+          "overall": "GOOD",
+          "issues": []
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "UNCERTAIN",
+          "coveringType": null,
+          "evidence": []
+        },
+        "expiryDate": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": []
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-6",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-6",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-6",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-6",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-6",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-6",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-6",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-6",
+          "field": "expiry_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-6",
+          "field": "expiry_readable",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-6",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-6",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "GOOD",
+          "status": "AGREEMENT"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-7",
+      "success": true,
+      "latencyMs": 16136,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-7",
+        "imageQuality": {
+          "overall": "DEGRADED",
+          "issues": [
+            "Barcode in image 'back' partially truncated at right edge",
+            "Barcode in image 'label' (close-up) shows partial truncation at bottom edge",
+            "No clear FNSKU label detected in supplied views",
+            "Sticker in 'label' image obscures part of ISBN barcode"
+          ]
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "VISIBLE",
+          "legibility": "LEGIBLE",
+          "valueCompleteness": "PARTIAL",
+          "detectedValue": "9780195692587",
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "ISBN barcode present on back cover, ISBN 0-19-569258-6 visible, barcode appears truncated at right edge of image"
+            },
+            {
+              "imageId": "label",
+              "description": "Close-up of same ISBN barcode, shows 9780195692587 below bars, bottom portion of barcode truncated at image edge, price sticker 'Rs 85' partially covers barcode area"
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "ISBN barcode visible and exposed on back cover"
+            },
+            {
+              "imageId": "label",
+              "description": "ISBN barcode visible; price sticker 'Rs 85' adjacent but does not fully cover barcode lines"
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": [
+          "Visible wear and corner damage on book edges"
+        ]
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-7",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "VISIBLE",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-7",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "LEGIBLE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-7",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-7",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-7",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-7",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-7",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-7",
+          "field": "expiry_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-7",
+          "field": "expiry_readable",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-7",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-7",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "DEGRADED",
+          "status": "DISAGREEMENT",
+          "failureType": "IMAGE_QUALITY_LIMITATION",
+          "likelyCause": "Model evaluated quality as DEGRADED"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-8",
+      "success": true,
+      "latencyMs": 11982,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-8",
+        "imageQuality": {
+          "overall": "GOOD",
+          "issues": []
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "VISIBLE",
+          "legibility": "LEGIBLE",
+          "valueCompleteness": "COMPLETE",
+          "detectedValue": "8901020383901",
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Barcode visible on bottom left of back panel, printed '8901020383901' with full barcode lines and margins within frame"
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Manufacturer barcode on back panel is exposed and uncovered"
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": []
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-8",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "VISIBLE",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-8",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "LEGIBLE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-8",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-8",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-8",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-8",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-8",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-8",
+          "field": "expiry_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-8",
+          "field": "expiry_readable",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-8",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-8",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "GOOD",
+          "status": "AGREEMENT"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-9",
+      "success": true,
+      "latencyMs": 13211,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-9",
+        "imageQuality": {
+          "overall": "GOOD",
+          "issues": []
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "VISIBLE",
+          "legibility": "LEGIBLE",
+          "valueCompleteness": "COMPLETE",
+          "detectedValue": "8906119246334",
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Barcode visible on back panel, lower left corner, with alphanumeric value printed below"
+            },
+            {
+              "imageId": "label",
+              "description": "Same barcode visible on product label with full alphanumeric value 8906119246334"
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Manufacturer barcode exposed and uncovered on back panel"
+            },
+            {
+              "imageId": "label",
+              "description": "Manufacturer barcode exposed and uncovered on label"
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": []
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-9",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "VISIBLE",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-9",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "LEGIBLE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-9",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-9",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-9",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-9",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-9",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-9",
+          "field": "expiry_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-9",
+          "field": "expiry_readable",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-9",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-9",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "GOOD",
+          "status": "AGREEMENT"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-10",
+      "success": true,
+      "latencyMs": 13982,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-10",
+        "imageQuality": {
+          "overall": "GOOD",
+          "issues": []
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "VISIBLE",
+          "legibility": "LEGIBLE",
+          "valueCompleteness": "COMPLETE",
+          "detectedValue": "6193875003622291",
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Manufacturer barcode printed on back panel with value 6193875003622291 and 'MADE IN CHINA' below"
+            },
+            {
+              "imageId": "label",
+              "description": "Close-up of manufacturer barcode showing 6193875003622291 with 'MADE IN CHINA' text"
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Manufacturer barcode visible and exposed on back panel"
+            },
+            {
+              "imageId": "label",
+              "description": "Manufacturer barcode fully visible without obstruction"
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": [
+          "Minor creasing and wear visible on blue cardboard packaging edges"
+        ]
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-10",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "VISIBLE",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-10",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "LEGIBLE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-10",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-10",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-10",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-10",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-10",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-10",
+          "field": "expiry_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-10",
+          "field": "expiry_readable",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-10",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-10",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "GOOD",
+          "status": "AGREEMENT"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-11",
+      "success": true,
+      "latencyMs": 13229,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-11",
+        "imageQuality": {
+          "overall": "GOOD",
+          "issues": []
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "VISIBLE",
+          "legibility": "LEGIBLE",
+          "detectedText": "WARNING: Hazard! - Small Parts Choking Hazard - Small Parts",
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Warning label with crossed-out infant symbol (0-3 years) and text about choking hazard visible on back of tin"
+            },
+            {
+              "imageId": "label",
+              "description": "Close-up view showing WARNING label with small parts choking hazard text beneath crossed-out infant icon"
+            }
+          ]
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "UNCERTAIN",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "COMPLETE",
+          "detectedValue": null,
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Manufacturer barcode printed on yellow label on back of tin, showing barcode lines and number 8901145104425"
+            },
+            {
+              "imageId": "label",
+              "description": "Clear view of manufacturer barcode with complete number 8901145104425 and barcode pattern"
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Manufacturer barcode is exposed and uncovered on the back label"
+            },
+            {
+              "imageId": "label",
+              "description": "Barcode lines and numbers are fully visible without any covering"
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": []
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-11",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "UNCERTAIN",
+          "status": "MODEL_UNCERTAIN",
+          "failureType": "UNCERTAINTY_ABSTENTION",
+          "likelyCause": "Model expressed uncertainty based on visual ambiguity",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-11",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "UNCERTAIN",
+          "status": "MODEL_UNCERTAIN",
+          "failureType": "UNCERTAINTY_ABSTENTION",
+          "likelyCause": "Model uncertain about barcode legibility"
+        },
+        {
+          "productId": "PRODUCT-11",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-11",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-11",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-11",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-11",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "VISIBLE",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-11",
+          "field": "expiry_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-11",
+          "field": "expiry_readable",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-11",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-11",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "GOOD",
+          "status": "AGREEMENT"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-12",
+      "success": true,
+      "latencyMs": 10582,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-12",
+        "imageQuality": {
+          "overall": "DEGRADED",
+          "issues": [
+            "Label image has significant glare obscuring parts of the barcode",
+            "Narrow label view limits inspection of complete barcode margins"
+          ]
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "VISIBLE",
+          "legibility": "ILLEGIBLE",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "Barcode visible at bottom of label but numbers are obscured by glare and image quality"
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "Manufacturer barcode visible and exposed at bottom of label"
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": [
+          "Medicine/pharmaceutical product packaging (Diprobate-G Plus Cream) without dedicated FNSKU label detected",
+          "Product text indicates FOR EXTERNAL USE ONLY warning present on back panel"
+        ]
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-12",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "VISIBLE",
+          "status": "AGREEMENT",
+          "evidenceImage": "label"
+        },
+        {
+          "productId": "PRODUCT-12",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "ILLEGIBLE",
+          "status": "DISAGREEMENT",
+          "failureType": "READABILITY_ERROR",
+          "likelyCause": "Reference: YES, Model: ILLEGIBLE"
+        },
+        {
+          "productId": "PRODUCT-12",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-12",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-12",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-12",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-12",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-12",
+          "field": "expiry_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-12",
+          "field": "expiry_readable",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-12",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-12",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "DEGRADED",
+          "status": "DISAGREEMENT",
+          "failureType": "IMAGE_QUALITY_LIMITATION",
+          "likelyCause": "Model evaluated quality as DEGRADED"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-13",
+      "success": true,
+      "latencyMs": 15446,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-13",
+        "imageQuality": {
+          "overall": "GOOD",
+          "issues": []
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "UNCERTAIN",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "COMPLETE",
+          "detectedValue": null,
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Barcode printed on back panel with numeric value 8904425062772"
+            },
+            {
+              "imageId": "label",
+              "description": "Same barcode 8904425062772 visible on close-up label view"
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Manufacturer barcode fully exposed and uncovered"
+            },
+            {
+              "imageId": "label",
+              "description": "Barcode lines and numbers clearly visible, not obstructed"
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "VISIBLE",
+          "legibility": "LEGIBLE",
+          "detectedValue": "09/2027",
+          "evidence": [
+            {
+              "imageId": "back",
+              "description": "Expiry Date field shows 09/2027 on product label"
+            },
+            {
+              "imageId": "label",
+              "description": "Expiry Date printed as 09/2027"
+            }
+          ]
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": []
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-13",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "UNCERTAIN",
+          "status": "MODEL_UNCERTAIN",
+          "failureType": "UNCERTAINTY_ABSTENTION",
+          "likelyCause": "Model expressed uncertainty based on visual ambiguity",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-13",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "UNCERTAIN",
+          "status": "MODEL_UNCERTAIN",
+          "failureType": "UNCERTAINTY_ABSTENTION",
+          "likelyCause": "Model uncertain about barcode legibility"
+        },
+        {
+          "productId": "PRODUCT-13",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-13",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-13",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-13",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-13",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-13",
+          "field": "expiry_visible",
+          "referenceVal": "YES",
+          "modelVal": "VISIBLE",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-13",
+          "field": "expiry_readable",
+          "referenceVal": "YES",
+          "modelVal": "LEGIBLE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-13",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-13",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "GOOD",
+          "status": "AGREEMENT"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-14",
+      "success": true,
+      "latencyMs": 10363,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-14",
+        "imageQuality": {
+          "overall": "GOOD",
+          "issues": []
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "UNCERTAIN",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "COMPLETE",
+          "detectedValue": null,
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "Vertical retail barcode visible on manufacturer label with complete bars and alphanumeric text 8190443202926"
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "Manufacturer barcode bars and numbers are fully exposed and visible on the label"
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": []
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-14",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "UNCERTAIN",
+          "status": "MODEL_UNCERTAIN",
+          "failureType": "UNCERTAINTY_ABSTENTION",
+          "likelyCause": "Model expressed uncertainty based on visual ambiguity",
+          "evidenceImage": "label"
+        },
+        {
+          "productId": "PRODUCT-14",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "UNCERTAIN",
+          "status": "MODEL_UNCERTAIN",
+          "failureType": "UNCERTAINTY_ABSTENTION",
+          "likelyCause": "Model uncertain about barcode legibility"
+        },
+        {
+          "productId": "PRODUCT-14",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-14",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-14",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-14",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-14",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-14",
+          "field": "expiry_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-14",
+          "field": "expiry_readable",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-14",
+          "field": "handling_mark_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-14",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "GOOD",
+          "status": "AGREEMENT"
+        }
+      ],
+      "safetyIncidents": []
+    },
+    {
+      "productId": "PRODUCT-15",
+      "success": true,
+      "latencyMs": 10207,
+      "model": "claude-sonnet-4-5-20250929",
+      "rawObservation": {
+        "unitId": "PRODUCT-15",
+        "imageQuality": {
+          "overall": "GOOD",
+          "issues": []
+        },
+        "polybag": {
+          "visibility": "NOT_DETECTED",
+          "sealStatus": "UNCERTAIN",
+          "packagingType": "NONE_DETECTED",
+          "evidence": []
+        },
+        "suffocationWarning": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedText": null,
+          "evidence": []
+        },
+        "fnsku": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "UNCERTAIN",
+          "detectedValue": null,
+          "placement": "UNCERTAIN",
+          "placementDescription": null,
+          "evidence": []
+        },
+        "manufacturerBarcode": {
+          "visibility": "UNCERTAIN",
+          "legibility": "UNCERTAIN",
+          "valueCompleteness": "COMPLETE",
+          "detectedValue": null,
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "EAN barcode printed on side label of carton with value 8901365440250"
+            }
+          ]
+        },
+        "manufacturerBarcodeCoverage": {
+          "status": "NOT_COVERED",
+          "coveringType": null,
+          "evidence": [
+            {
+              "imageId": "label",
+              "description": "Manufacturer barcode visible and uncovered on carton side panel"
+            }
+          ]
+        },
+        "expiryDate": {
+          "visibility": "NOT_DETECTED",
+          "legibility": "UNCERTAIN",
+          "detectedValue": null,
+          "evidence": []
+        },
+        "handlingMarks": [],
+        "otherVisibleIssues": []
+      },
+      "comparisons": [
+        {
+          "productId": "PRODUCT-15",
+          "field": "manufacturer_barcode_visible",
+          "referenceVal": "YES",
+          "modelVal": "UNCERTAIN",
+          "status": "MODEL_UNCERTAIN",
+          "failureType": "UNCERTAINTY_ABSTENTION",
+          "likelyCause": "Model expressed uncertainty based on visual ambiguity",
+          "evidenceImage": "label"
+        },
+        {
+          "productId": "PRODUCT-15",
+          "field": "manufacturer_barcode_readable",
+          "referenceVal": "YES",
+          "modelVal": "UNCERTAIN",
+          "status": "MODEL_UNCERTAIN",
+          "failureType": "UNCERTAINTY_ABSTENTION",
+          "likelyCause": "Model uncertain about barcode legibility"
+        },
+        {
+          "productId": "PRODUCT-15",
+          "field": "fnsku_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-15",
+          "field": "fnsku_value",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NONE",
+          "status": "AGREEMENT"
+        },
+        {
+          "productId": "PRODUCT-15",
+          "field": "polybag_present",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-15",
+          "field": "polybag_sealed",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-15",
+          "field": "suffocation_warning_visible",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "NOT_DETECTED",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-15",
+          "field": "expiry_visible",
+          "referenceVal": "NO",
+          "modelVal": "NOT_DETECTED",
+          "status": "AGREEMENT",
+          "evidenceImage": "unspecified"
+        },
+        {
+          "productId": "PRODUCT-15",
+          "field": "expiry_readable",
+          "referenceVal": "NOT_APPLICABLE",
+          "modelVal": "UNCERTAIN",
+          "status": "NOT_SCORABLE"
+        },
+        {
+          "productId": "PRODUCT-15",
+          "field": "handling_mark_visible",
+          "referenceVal": "YES",
+          "modelVal": "NOT_DETECTED",
+          "status": "DISAGREEMENT",
+          "failureType": "VISION_FALSE_NEGATIVE",
+          "likelyCause": "Model reported NOT_DETECTED while visual inspection shows YES",
+          "evidenceImage": "back"
+        },
+        {
+          "productId": "PRODUCT-15",
+          "field": "photo_quality_sufficient",
+          "referenceVal": "YES",
+          "modelVal": "GOOD",
+          "status": "AGREEMENT"
+        }
+      ],
+      "safetyIncidents": []
+    }
+  ]
+}

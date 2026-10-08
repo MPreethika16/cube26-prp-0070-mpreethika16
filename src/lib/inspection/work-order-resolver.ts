@@ -129,6 +129,51 @@ export const REAL_PHONE_001_WORK_ORDER: WorkOrderSpecification = {
   },
 };
 
+function hubOrder(
+  unitId: string,
+  sku: string,
+  requirements: WorkOrderSpecification["requirements"]
+): WorkOrderSpecification {
+  return {
+    workOrderId: `WO-${unitId}`,
+    unitId,
+    sku,
+    asin: "B0HUBLOCAL",
+    expectedFnsku: "NO-FNSKU-ON-UNIT",
+    requirements,
+  };
+}
+
+const noBag = {
+  polybag: "NOT_REQUIRED" as const,
+  suffocationWarning: "NOT_REQUIRED" as const,
+  expiryDate: "NOT_REQUIRED" as const,
+  handlingMarks: { state: "NOT_REQUIRED" as const, requiredMarks: [] as string[] },
+};
+
+/** Retail units from the 8 Oct hub folder. Requirements follow what is printed, not a guessed grade. */
+const HUB_WORK_ORDERS: Record<string, WorkOrderSpecification> = {
+  "HUB-DLINK-NFP-0WHI21": hubOrder("HUB-DLINK-NFP-0WHI21", "NFP-0WHI21", {
+    polybag: "REQUIRED",
+    suffocationWarning: "REQUIRED",
+    expiryDate: "NOT_REQUIRED",
+    handlingMarks: { state: "NOT_REQUIRED", requiredMarks: [] },
+  }),
+  "HUB-TERABYTE-TB-UB-0110": hubOrder("HUB-TERABYTE-TB-UB-0110", "TB-UB-0110", {
+    polybag: "REQUIRED",
+    suffocationWarning: "REQUIRED",
+    expiryDate: "NOT_REQUIRED",
+    handlingMarks: { state: "NOT_REQUIRED", requiredMarks: [] },
+  }),
+  "HUB-DAHUA-HFW1239": hubOrder("HUB-DAHUA-HFW1239", "DH-IPC-HFW1239TL2-A-IL", {
+    ...noBag,
+    handlingMarks: { state: "REQUIRED", requiredMarks: ["fragile", "keep_dry", "this_way_up"] },
+  }),
+  "HUB-VGA-60M": hubOrder("HUB-VGA-60M", "VGA-EXT-60M", noBag),
+  "HUB-CPPLUS-TC51": hubOrder("HUB-CPPLUS-TC51", "CP-URC-TC51PL3C-L-V2", noBag),
+  "HUB-CPPLUS-Z43Q": hubOrder("HUB-CPPLUS-Z43Q", "CP-Z43Q", noBag),
+};
+
 /**
  * Resolves the WorkOrderSpecification for a given unit ID.
  *
@@ -165,6 +210,9 @@ export function resolveWorkOrderForUnit(unitId: string, orgId?: string): WorkOrd
   }
   if (normalizedId === "REAL-PHONE-001") {
     return REAL_PHONE_001_WORK_ORDER;
+  }
+  if (HUB_WORK_ORDERS[normalizedId]) {
+    return HUB_WORK_ORDERS[normalizedId];
   }
 
   const csvPath = path.join(process.cwd(), "data", "prep_sample.csv");

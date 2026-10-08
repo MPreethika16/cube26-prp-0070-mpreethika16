@@ -237,6 +237,7 @@ async function readInputBytes(
     row.ref,
     path.join(process.cwd(), row.ref),
     path.join(process.cwd(), "fixtures", "prep", "real", subjectId, path.basename(row.ref)),
+    path.join(process.cwd(), "fixtures", "prep", "hub", subjectId, path.basename(row.ref)),
   ];
   for (const candidate of candidates) {
     try {
