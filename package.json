@@ -13,7 +13,8 @@
     "inspection:dev": "tsx scripts/inspection-dev.ts",
     "evaluate": "tsx scripts/evaluate.ts",
     "vision:evaluate": "tsx scripts/vision-evaluate.ts",
-    "test:rls": "tsx scripts/test-rls.ts"
+    "test:rls": "tsx scripts/test-rls.ts",
+    "round3:e2e": "tsx scripts/round3-e2e.ts"
   },
   "dependencies": {
     "@google/genai": "^2.24.0",
